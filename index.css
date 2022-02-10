@@ -1,0 +1,260 @@
+* {
+    color: #2f4f4f;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+
+body {
+    background-color: #fff;
+}
+
+.game-container {
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HEADER */
+
+.title-container {
+    width: 510px;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 3px solid #e71f1f;
+    margin: 1.75em 0 0;
+}
+
+.title-container > h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #e71f1f
+}
+
+.title-image {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.title-buttons {
+    margin-left: auto;
+}
+
+.title-info {
+    color: #e71f1f;
+    font-weight: bold;
+    border: none;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+.title-info > .fa-solid {
+    color: #e71f1f;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* TILES */
+
+.tile-container {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.tile {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #838383;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+/* KEYBOARD */
+
+.key-container {
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-container button {
+    width: 43px;
+    height: 58px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    border: 1px solid #2f4f4f;
+    margin: 4px;
+}
+
+.key-container button:active {
+    /* background-color: #3e8e41; */
+    box-shadow: inset 0px 0px 10px -5px #666;
+    transform: translateY(1px);
+  }
+
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+    width: 68px;
+}
+
+.key-container button:last-child {
+    font-size: 1.1rem;
+}
+
+/* MODALS FOR BIRD INFO AND INSTRUCTIONS */
+
+.modal-container,
+.instructions-container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(219, 218, 218, 0.3);
+}
+
+.modal,
+.instructions {
+    background-color: #fff;;
+    padding: 1.125em 1.125em;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 17%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+.modal-top {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin: 0.5em;
+    margin-left: 0.75em;
+    color: #e71f1f;
+}   
+
+.fa-circle-xmark {
+    font-size: 1.125rem;
+}
+
+.modal-body > img {
+      width: 90%;
+      border-radius: 10px;
+      align-self: center;
+      /* margin-bottom: 1em; */
+  }
+
+.close-modal {
+    align-self: flex-start;
+    border: none;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+
+.close-instructions {
+      border: none;
+      background-color: white;
+      width: 25px;
+      height: 25px;
+      margin: 0;
+      align-self: flex-start;
+
+  }
+
+  
+a {
+    font-size: 0.5rem;
+    margin-top: 0.5em;
+}
+
+.info-body {
+    margin-bottom: 0;
+    padding: 0 1.5em;
+    text-align: justify;
+}
+
+
+/* MESSAGE */
+
+.message-container {
+    height: 30px;
+    margin: 0.75em 0;
+
+}
+
+.message {
+    background-color: #ffc0cb;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+/* TILE COLOURS AND ANIMATIONS */
+
+.flip {
+    animation: flipping 0.5s linear;
+}
+
+@keyframes flipping {
+    0% {
+        transform:  rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.grey-overlay {
+    background-color: #808080 !important;
+    color: #fff !important;
+    border: none;
+}
+
+.yellow-overlay {
+    background-color: #dbc500!important;
+    color: #fff !important;
+    border: none;
+}
+
+.green-overlay {
+    background-color: #00CC60 !important;
+    color: #fff !important;
+    border: none;
+}

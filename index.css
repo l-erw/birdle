@@ -9,11 +9,12 @@ body {
 }
 
 .game-container {
-    /* height: 90vh; */
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border-radius: 5px;
 }
 
 /* HEADER */
@@ -119,7 +120,8 @@ body {
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
 
 .modal-container,
-.instructions-container {
+.instructions-container,
+.credits-container {
     display: none;
     width: 100%;
     height: 100%;
@@ -202,11 +204,20 @@ a {
 }
 
 .info-body {
-    margin-bottom: 0;
+    margin: 0.25em;
     padding: 0 1.5em;
     text-align: justify;
 }
 
+.modal-body > img {
+    max-width: 50%;
+    padding: 0.25em 1em;
+    margin: 0.5em 0;
+}
+
+h3 {
+    margin: 0.5em;
+}
 
 /* MESSAGE */
 
@@ -257,4 +268,21 @@ a {
     background-color: #00CC60 !important;
     color: #fff !important;
     border: none;
+}
+
+/* FOOTER - CREDITS */
+
+footer {
+    margin: 0 auto;
+
+}
+
+.credits {
+    border: none;
+    padding: 0.5em 0.75em;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    background-color: #e71f1f;
+    color: #fff;
+    font-family: inherit;
 }

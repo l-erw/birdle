@@ -12,14 +12,24 @@ const keyboard = document.querySelector(".key-container")
 const messageDisplay = document.querySelector(".message-container")
 const infoDisplay = document.getElementById("info-overlay")
 const instructionsDisplay = document.getElementById("instructions-overlay")
+const creditsDisplay = document.getElementById("credits-overlay")
 
-const closeModal = document.getElementById("close-modal").addEventListener("click", function() {
-    infoDisplay.style.display = "none"
+
+const openCredits = document.getElementById("credits-modal").addEventListener("click", function() {
+    creditsDisplay.style.display = "block"
 })
 
-const openModal = document.getElementById("open-modal").addEventListener("click", function() {
-    infoDisplay.style.display = "block"
-} )
+const closeCredits = document.getElementById("close-credits").addEventListener("click", function() {
+    creditsDisplay.style.display = "none"
+})
+
+// const closeModal = document.getElementById("close-modal").addEventListener("click", function() {
+//     infoDisplay.style.display = "none"
+// })
+
+// const openModal = document.getElementById("open-modal").addEventListener("click", function() {
+//     infoDisplay.style.display = "block"
+// } )
 // openModal.classList.add("title-button-enabled")
 
 const openInstructions = document.getElementById("instructions-modal").addEventListener("click", function() {
@@ -55,6 +65,8 @@ const birdle = "KESTREL"
 const keys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
 
 
+//add variables for different word lengths - below is for 7. Have easy (5), medium (7), hard (9)? 
+
 const guessRows = [
     ["", "", "", "", "", "", ""],
     ["", "", "", "", "", "", ""],
@@ -89,19 +101,19 @@ keys.forEach(key => {
     buttonElement.addEventListener('click', () => handleClick(key))
     keyboard.append(buttonElement)
 })
-
+//if game is over then handle click should be deactivated - check Ania's code
 const handleClick = (key) => {
-    console.log("clicked", key)
-    if (key === "«") {
-        deleteLetter()
-        return
-    }
-    if (key === "ENTER") {
-        console.log("check row");
-        checkRow()
-        return
-    } 
-    addLetter(key)
+    if (!isGameOver){ 
+        if (key === "«") {
+            deleteLetter()
+            return
+         }
+        if (key === "ENTER") {
+            console.log("check row");
+            checkRow()
+            return
+        } 
+        addLetter(key)}
 }
 
 const addLetter = (letter) => {
@@ -137,7 +149,7 @@ const checkRow = () => {
                 showMessage("Congratulations, you got the Birdle!")
                 getWordle()
                 isGameOver = true
-                
+                return
             
             }, 4000)
         } else {

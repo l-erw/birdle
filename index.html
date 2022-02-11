@@ -36,27 +36,23 @@
                     After each guess, the colour of the tiles will change to show how close your guess was to the bird. 
                 </p>
 
-                <h3>Examples</h3>   
+                <h3>Examples</h3> 
+
+                <img src="./correct-spot.png" alt="">
                 <p class="info-body">
-                    ROBIN
                     The letter R is in the word and in the correct spot.
                 </p>
-
+                <img src="./wrong-spot.png" alt="">
                 <p class="info-body">
                     HERON
                     The letter O is in the word but in the wrong spot.
                 </p>
-
+                <img src="./no-spot.png" alt="">
                 <p class="info-body">
                     QUAIL
                     The letter U is not in the word in any spot.
                 </p>
-
-                <h2>CREDITS</h2>
-                <a href="https://www.powerlanguage.co.uk/wordle/">The original Wordle game</a>
-                <a href="https://unsplash.com/photos/UfyDkU1uVX0">Bird images from Unsplash</a>
-                <a href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/">Bird information from the RSPB</a>
-                <a href="https://www.flaticon.com/free-icons/nest" title="nest icons">Nest icon created by torskaya - Flaticon</a>
+                     
             </div> 
         </div>
     </div>
@@ -101,6 +97,28 @@
         <div class="tile-container"></div>
         <div class="key-container"></div>
     </div>
+    <footer>
+        <div class="credits-container" id="credits-overlay">
+            <div class="instructions">
+                <div class="modal-top">
+                    <button id="close-credits" class="close-modal">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button> 
+
+                    <h2>CREDITS</h2> 
+                </div>
+                
+                 <div class="modal-body">      
+                    <a href="https://www.powerlanguage.co.uk/wordle/">The original Wordle game</a>
+                    <a href="https://www.youtube.com/watch?v=mpby4HiElek">Ania Kubow's Wordle Clone</a>
+                    <a href="https://unsplash.com/photos/UfyDkU1uVX0">Bird images from Unsplash</a>
+                    <a href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/">Bird information from the RSPB</a>
+                    <a href="https://www.flaticon.com/free-icons/nest" title="nest icons">Nest icon created by torskaya - Flaticon</a>
+                </div> 
+            </div>
+        </div>
+        <button class="credits" id="credits-modal">Credits</button>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>

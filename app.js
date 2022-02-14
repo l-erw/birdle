@@ -1,7 +1,6 @@
 //TO DO
 // 1. link up dictionary API 
 // 4. Find image and info to include when Birdle is won
-// 5. Create an overlay for the rules of Birdle 
 // Find where to remove event listener / handle click function once game is over
 // Add a "not enough letters" notification if enter is pressed before 7 letters
 
@@ -41,6 +40,131 @@ const closeInstructions = document.getElementById("close-instructions").addEvent
 })
 
 const birdle = "KESTREL"
+
+let birds7Letters = [
+    {
+        id: "1",
+        birdleName: "KESTREL",
+        name: "KESTREL",
+        imageUrl: "https://images.unsplash.com/photo-1614522433183-b620ffdad59b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1570&q=80",
+        imageAltText: "a kestrel hovering in the sky",
+        imageAuthor: "Bob Brewer",
+        imageAuthorUrl: "https://unsplash.com/photos/UfyDkU1uVX0",
+        birdFacts: "",
+        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/kestrel/"
+        //can I have the root of the urls hardcoded and then add the end bits in from this
+    },
+    {
+        id: "2",
+        birdleName: "SPARROW",
+        name: "SPARROW",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "3",
+        birdleName: "BLUETIT",
+        name: "BLUE TIT",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "4",
+        birdleName:"BITTERN",
+        name: "BITTERN",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "5",
+        birdleName: "BUZZARD",
+        name: "BUZZARD",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "6",
+        birdleName: "COALTIT",
+        name: "COAL TIT",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "7",
+        birdleName: "GOSHAWK",
+        name: "GOSHAWK",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "8",
+        birdleName: "REDKITE",
+        name: "RED KITE",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "9",
+        birdleName: "SEAGULL",
+        name: "SEAGULL",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "10",
+        birdleName: "LAPWING",
+        name: "LAPWING",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "11",
+        birdleName: "BARNOWL",
+        name: "BARN OWL",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "12",
+        birdleName: "SKYLARK",
+        name: "SKYLARK",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: "13",
+        birdleName: "SWALLOW",
+        name: "SWALLOW",
+        imageUrl: "",
+        imageAuthor: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }
+
+]
+
 
 // const getWordle = () => {
 //     fetch("http://localhost.8000/word")

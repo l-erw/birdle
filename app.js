@@ -79,11 +79,11 @@ const birds7Letters = [
         birdleName:"BITTERN",
         name: "Bittern",
         imageUrl: "https://cdn.pixabay.com/photo/2021/07/15/14/26/bittern-6468623_1280.jpg",
-        imageAltText: "",
+        imageAltText: "a bittern flying low through some reeds",
         imageAuthor: "",
         imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        birdFacts: "The bittern is a thickset heron with all-over bright, pale, buffy-brown plumage covered with dark streaks and bars. It flies on broad, rounded, bowed wings. A secretive bird, very difficult to see, as it moves silently through reeds at water's edge, looking for fish. The males make a remarkable far-carrying, booming sound in spring. It's very small, reedbed-dependent population make it an Amber List species. It is also a Schedule 1 species.",
+        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/bittern"
     },
     {
         id: "5",
@@ -112,7 +112,7 @@ const birds7Letters = [
         birdleName: "GOSHAWK",
         name: "Goshawk",
         imageUrl: "https://cdn.pixabay.com/photo/2021/10/10/09/19/goshawk-6696074_1280.jpg",
-        imageAltText: "",
+        imageAltText: "a goshawk standing on a mossy log",
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "The goshawk is a large hawk. When up close it has a fierce expression with bright red eyes and a distinctive white eyebrow. Its broad wings enable it to hunt at high speed, weaving in and out of trees, and its long legs and talons can catch its prey in flight. In late winter and spring it has a 'sky-dance' display. Goshawks are a Schedule 1 species. They are still persecuted and their nests are frequently robbed. Best looked for near large areas of woodland and forests with glades and paths for it to hunt along. They can also be seen hunting over more open countryside.",
@@ -145,7 +145,7 @@ const birds7Letters = [
         birdleName: "LAPWING",
         name: "Lapwing",
         imageUrl: "https://cdn.pixabay.com/photo/2021/09/06/14/06/lapwing-6601790_1280.jpg",
-        imageAltText: "",
+        imageAltText: "a lapwing standing in a grassy area",
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "Also known as the peewit in imitation of its display calls, its proper name describes its wavering flight. Its black and white appearance and round-winged shape in flight make it distinctive, even without its splendid crest. This familiar farmland bird has suffered significant declines recently and is now a Red List species. Lapwings are found on farmland throughout the UK particularly in lowland areas of northern England, the Borders and eastern Scotland. In the breeding season prefer spring sown cereals, root crops, permanent unimproved pasture, meadows and fallow fields.",
@@ -155,12 +155,12 @@ const birds7Letters = [
         id: "11",
         birdleName: "BARNOWL",
         name: "Barn owl",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://images.unsplash.com/photo-1600892457290-84afbce878f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2183&q=80",
+        imageAltText: "a barn owl flying with a green background",
+        imageAuthor: "Bob Brewer",
+        imageAuthorUrl: "https://unsplash.com/photos/DohCyud44t4",
+        birdFacts: "With heart-shaped face, buff back and wings and pure white underparts, the barn owl is a distinctive and much-loved countryside bird. Widely distributed across the UK, and indeed the world, this bird has suffered declines through the 20th century and is thought to have been adversely affected by organochlorine pesticides such as DDT in the 1950s and '60s. Barn owls can be seen in open country, along field edges, riverbanks and roadside verges.",
+        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/barn-owl/"
     },
     {
         id: "12",
@@ -171,7 +171,7 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "",
-        birdFactsUrl: ""
+        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/skylark/"
     },
     {
         id: "13",
@@ -182,7 +182,7 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "",
-        birdFactsUrl: ""
+        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/swallow"
     }
 
 ]

@@ -69,7 +69,7 @@ body {
     max-width: 100%;
 }
 
-@media (min-width: 350px) {
+@media (max-width: 350px) {
     .tile-container {
         width: 350px;
         max-width: 100%;

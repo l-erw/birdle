@@ -39,8 +39,6 @@ const closeInstructions = document.getElementById("close-instructions").addEvent
     instructionsDisplay.style.display = "none"
 })
 
-const birdle = "KESTREL"
-
 const birds7Letters = [
     {
         id: "1",
@@ -191,7 +189,9 @@ const birds7Letters = [
 
 let randomBirdle = birds7Letters[Math.floor(Math.random() * birds7Letters.length)]
 
-console.log(randomBirdle)
+const birdle = randomBirdle.birdleName
+
+
 
 // const getWordle = () => {
 //     fetch("http://localhost.8000/word")
@@ -362,3 +362,9 @@ const flipTile = () => {
         }, 500 * index) 
         })
 }
+
+//DISPLAYING THE BIRD INFORMATION AT THE END//
+
+let birdInfoHeading = document.getElementById("bird-info-heading")
+
+birdInfoHeading.innerText = randomBirdle.name

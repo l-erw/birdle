@@ -69,7 +69,7 @@ body {
     max-width: 100%;
 }
 
-@media (max-width: 350px) {
+/* @media (max-width: 350px) {
     .tile-container {
         width: 350px;
         max-width: 100%;
@@ -95,7 +95,7 @@ body {
     .key-container button:nth-child(28) {
         width: 58px;
 }
-}
+} */
 
 .row {
     display: flex;

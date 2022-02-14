@@ -197,6 +197,7 @@ h2 {
     margin: 0.5em;
     margin-left: 0.75em;
     color: #e71f1f;
+    text-transform: uppercase;
 }   
 
 .fa-circle-xmark {

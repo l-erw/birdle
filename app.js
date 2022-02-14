@@ -373,7 +373,7 @@ birdInfoHeading.innerText = randomBirdle.name
 
 birdInfoBody.innerHTML = `
 <img src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
-<a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor} on Unsplash</a>
+<a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
 
 <p class="info-body">
 ${randomBirdle.birdFacts}

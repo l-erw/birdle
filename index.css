@@ -305,7 +305,7 @@ h3 {
 
 /* FOOTER - CREDITS */
 
-footer {
+.game-container-bottom {
     margin: 0 auto;
     width: 510px;
     max-width: 100%;

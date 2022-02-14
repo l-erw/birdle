@@ -22,9 +22,9 @@ const closeCredits = document.getElementById("close-credits").addEventListener("
     creditsDisplay.style.display = "none"
 })
 
-// const closeModal = document.getElementById("close-modal").addEventListener("click", function() {
-//     infoDisplay.style.display = "none"
-// })
+const closeModal = document.getElementById("close-modal").addEventListener("click", function() {
+    infoDisplay.style.display = "none"
+})
 
 // const openModal = document.getElementById("open-modal").addEventListener("click", function() {
 //     infoDisplay.style.display = "block"
@@ -366,5 +366,15 @@ const flipTile = () => {
 //DISPLAYING THE BIRD INFORMATION AT THE END//
 
 let birdInfoHeading = document.getElementById("bird-info-heading")
-
+let birdInfoBody = document.getElementById("bird-info-body")
 birdInfoHeading.innerText = randomBirdle.name
+
+birdInfoBody.innerHTML = `
+<img src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
+<a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor} on Unsplash</a>
+
+<p class="info-body">
+${randomBirdle.birdFacts}
+</p>  
+
+<a href=${randomBirdle.birdFactsUrl}>Info from RSPB</a>`

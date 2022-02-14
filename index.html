@@ -38,16 +38,16 @@
 
                 <h3>Examples</h3> 
 
-                <img src="./correct-spot.png" alt="">
+                <img class="example-image" src="./correct-spot.png" alt="">
                 <p class="info-body">
                     The letter R is in the word and in the correct spot.
                 </p>
-                <img src="./wrong-spot.png" alt="">
+                <img class="example-image" src="./wrong-spot.png" alt="">
                 <p class="info-body">
                     HERON
                     The letter O is in the word but in the wrong spot.
                 </p>
-                <img src="./no-spot.png" alt="">
+                <img class="example-image" src="./no-spot.png" alt="">
                 <p class="info-body">
                     QUAIL
                     The letter U is not in the word in any spot.
@@ -65,19 +65,8 @@
                     
                 <h2 class="info-heading" id="bird-info-heading"></h2>
             </div>
-            <div class="modal-body">
-                <img src="https://images.unsplash.com/photo-1614522433183-b620ffdad59b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1570&q=80" alt="a kestrel hovering in the sky">
-                <a href="https://unsplash.com/photos/UfyDkU1uVX0">Bob Brewer on Unsplash</a>
+            <div class="modal-body" id="bird-info-body">
                 
-                <p class="info-body">
-                Kestrels are a familiar sight with their pointed wings and long tail, hovering beside a roadside verge. Numbers of kestrels have declined since the 1970s, probably as a result of changes in farming and so it is included on the Amber List.
-                They have adapted readily to man-made environments and can survive right in the centre of cities.
-                </p>  
-
-                <p class="info-body">
-                    Kestrels are found in a wide variety of habitats, from moor and heath, to farmland and urban areas. The only places they do not favour are dense forests, vast treeless wetlands and mountains.
-                </p>
-                <a href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/kestrel/">Info from RSPB</a>
             </div>
             
         </div>  
@@ -98,6 +87,9 @@
         <div class="key-container"></div>
     </div>
     <footer>
+        <div class="footer-buttons">
+            <button class="credits" id="credits-modal">CREDITS</button>
+        </div>
         <div class="credits-container" id="credits-overlay">
             <div class="instructions">
                 <div class="modal-top">
@@ -117,7 +109,7 @@
                 </div> 
             </div>
         </div>
-        <button class="credits" id="credits-modal">Credits</button>
+        
     </footer>
     <script src="app.js"></script>
 </body>

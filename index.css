@@ -241,7 +241,7 @@ a {
     text-align: justify;
 }
 
-.modal-body > img {
+.example-image {
     max-width: 50%;
     padding: 0.25em 1em;
     margin: 0.5em 0;
@@ -306,15 +306,28 @@ h3 {
 
 footer {
     margin: 0 auto;
+    width: 510px;
+    max-width: 100%;
+    margin-top: 0.5em;
 
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5em;
+    border-top: 3px solid #e71f1f;
+    margin: 0 auto;
 }
 
 .credits {
     border: none;
     padding: 0.5em 0.75em;
     border-radius: 5px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     background-color: #e71f1f;
     color: #fff;
     font-family: inherit;
+    font-weight: 600;
 }

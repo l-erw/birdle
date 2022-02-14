@@ -43,7 +43,7 @@ const birds7Letters = [
     {
         id: "1",
         birdleName: "KESTREL",
-        name: "KESTREL",
+        name: "Kestrel",
         imageUrl: "https://images.unsplash.com/photo-1614522433183-b620ffdad59b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1570&q=80",
         imageAltText: "a kestrel hovering in the sky",
         imageAuthor: "Bob Brewer",
@@ -55,7 +55,7 @@ const birds7Letters = [
     {
         id: "2",
         birdleName: "SPARROW",
-        name: "SPARROW",
+        name: "Sparrow",
         imageUrl: "https://images.unsplash.com/photo-1591804203147-4a2377cf721d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3028&q=80",
         imageAltText: "a sparrow sitting on a fence post with a green background",
         imageAuthor: "Adam Anderson",
@@ -66,7 +66,7 @@ const birds7Letters = [
     {
         id: "3",
         birdleName: "BLUETIT",
-        name: "BLUE TIT",
+        name: "Blue tit",
         imageUrl: "https://images.unsplash.com/photo-1606396191258-99a611410bcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80",
         imageAltText: "a blue-tit on a twig with a dark background",
         imageAuthor: "Amee Fairbank-Brown",
@@ -77,7 +77,7 @@ const birds7Letters = [
     {
         id: "4",
         birdleName:"BITTERN",
-        name: "BITTERN",
+        name: "Bittern",
         imageUrl: "https://cdn.pixabay.com/photo/2021/07/15/14/26/bittern-6468623_1280.jpg",
         imageAltText: "",
         imageAuthor: "",
@@ -88,7 +88,7 @@ const birds7Letters = [
     {
         id: "5",
         birdleName: "BUZZARD",
-        name: "BUZZARD",
+        name: "Buzzard",
         imageUrl: "https://images.unsplash.com/photo-1630336597270-28e1a7c549b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
         imageAltText: "a buzzard with wings spread flying in the sky",
         imageAuthor: "David Adams",
@@ -99,7 +99,7 @@ const birds7Letters = [
     {
         id: "6",
         birdleName: "COALTIT",
-        name: "COAL TIT",
+        name: "Coal tit",
         imageUrl: "https://images.unsplash.com/photo-1643985209176-a372071b4706?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2026&q=80",
         imageAltText: "a coal tit sitting on a bare branch against a blue sky",
         imageAuthor: "Joe Straker",
@@ -110,7 +110,7 @@ const birds7Letters = [
     {
         id: "7",
         birdleName: "GOSHAWK",
-        name: "GOSHAWK",
+        name: "Goshawk",
         imageUrl: "https://cdn.pixabay.com/photo/2021/10/10/09/19/goshawk-6696074_1280.jpg",
         imageAltText: "",
         imageAuthor: "",
@@ -121,7 +121,7 @@ const birds7Letters = [
     {
         id: "8",
         birdleName: "REDKITE",
-        name: "RED KITE",
+        name: "Red kite",
         imageUrl: "",
         imageAltText: "",
         imageAuthor: "",
@@ -132,7 +132,7 @@ const birds7Letters = [
     {
         id: "9",
         birdleName: "MOORHEN",
-        name: "MOORHEN",
+        name: "Moorhen",
         imageUrl: "https://cdn.pixabay.com/photo/2020/04/28/09/43/moorhen-5103686_1280.jpg",
         imageAltText: "a moorhen balancing on a log in water covered with leaves",
         imageAuthor: "",
@@ -143,7 +143,7 @@ const birds7Letters = [
     {
         id: "10",
         birdleName: "LAPWING",
-        name: "LAPWING",
+        name: "Lapwing",
         imageUrl: "https://cdn.pixabay.com/photo/2021/09/06/14/06/lapwing-6601790_1280.jpg",
         imageAltText: "",
         imageAuthor: "",
@@ -154,7 +154,7 @@ const birds7Letters = [
     {
         id: "11",
         birdleName: "BARNOWL",
-        name: "BARN OWL",
+        name: "Barn owl",
         imageUrl: "",
         imageAltText: "",
         imageAuthor: "",
@@ -165,7 +165,7 @@ const birds7Letters = [
     {
         id: "12",
         birdleName: "SKYLARK",
-        name: "SKYLARK",
+        name: "Skylark",
         imageUrl: "",
         imageAltText: "",
         imageAuthor: "",
@@ -176,7 +176,7 @@ const birds7Letters = [
     {
         id: "13",
         birdleName: "SWALLOW",
-        name: "SWALLOW",
+        name: "Swallow",
         imageUrl: "",
         imageAltText: "",
         imageAuthor: "",
@@ -252,7 +252,7 @@ keys.forEach(key => {
     buttonElement.addEventListener('click', () => handleClick(key))
     keyboard.append(buttonElement)
 })
-//if game is over then handle click should be deactivated - check Ania's code
+
 const handleClick = (key) => {
     if (!isGameOver){ 
         if (key === "«") {
@@ -299,14 +299,16 @@ const checkRow = () => {
             setTimeout(()=> {
                 showMessage("Congratulations, you got the Birdle!")
                 getWordle()
-                isGameOver = true
-                return
+                
             
             }, 4000)
+            isGameOver = true
         } else {
             if (currentRow >= 5) {
+                setTimeout(() => {
+                    showMessage(`Game Over - the Birdle was ${birdle}`)
+                }, 4000)
                 isGameOver = false
-                showMessage(`Game Over - the Birdle was ${birdle}`)
                 return
             }
             if (currentRow < 5) {

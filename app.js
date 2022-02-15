@@ -15,6 +15,7 @@ const messageDisplay = document.querySelector(".message-container")
 const infoDisplay = document.getElementById("info-overlay")
 const instructionsDisplay = document.getElementById("instructions-overlay")
 const creditsDisplay = document.getElementById("credits-overlay")
+const hintsBtn = document.getElementById("hint-modal")
 
 
 const openCredits = document.getElementById("credits-modal").addEventListener("click", function() {
@@ -46,7 +47,7 @@ const birds7Letters = [
     {
         id: "1",
         birdleName: "KESTREL",
-        name: "Kestrel",
+        name: "kestrel",
         imageUrl: "https://images.unsplash.com/photo-1614522433183-b620ffdad59b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1570&q=80",
         imageAltText: "a kestrel hovering in the sky",
         imageAuthor: "Bob Brewer on Unsplash",
@@ -58,7 +59,7 @@ const birds7Letters = [
     {
         id: "2",
         birdleName: "SPARROW",
-        name: "Sparrow",
+        name: "sparrow",
         imageUrl: "https://images.unsplash.com/photo-1591804203147-4a2377cf721d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3028&q=80",
         imageAltText: "a sparrow sitting on a fence post with a green background",
         imageAuthor: "Adam Anderson on Unsplash",
@@ -69,7 +70,7 @@ const birds7Letters = [
     {
         id: "3",
         birdleName: "BLUETIT",
-        name: "Blue tit",
+        name: "blue tit",
         imageUrl: "https://images.unsplash.com/photo-1606396191258-99a611410bcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80",
         imageAltText: "a blue-tit on a twig with a dark background",
         imageAuthor: "Amee Fairbank-Brown on Unsplash",
@@ -80,7 +81,7 @@ const birds7Letters = [
     {
         id: "4",
         birdleName:"BITTERN",
-        name: "Bittern",
+        name: "bittern",
         imageUrl: "https://cdn.pixabay.com/photo/2021/07/15/14/26/bittern-6468623_1280.jpg",
         imageAltText: "a bittern flying low through some reeds",
         imageAuthor: "",
@@ -91,7 +92,7 @@ const birds7Letters = [
     {
         id: "5",
         birdleName: "BUZZARD",
-        name: "Buzzard",
+        name: "buzzard",
         imageUrl: "https://cdn.pixabay.com/photo/2022/02/01/11/59/buzzard-6986163_1280.jpg",
         imageAltText: "a buzzard flying in the sky",
         imageAuthor: "",
@@ -113,7 +114,7 @@ const birds7Letters = [
     {
         id: "7",
         birdleName: "GOSHAWK",
-        name: "Goshawk",
+        name: "goshawk",
         imageUrl: "https://cdn.pixabay.com/photo/2021/10/10/09/19/goshawk-6696074_1280.jpg",
         imageAltText: "a goshawk standing on a mossy log",
         imageAuthor: "",
@@ -124,7 +125,7 @@ const birds7Letters = [
     {
         id: "8",
         birdleName: "REDKITE",
-        name: "Red kite",
+        name: "red kite",
         imageUrl: "https://images.unsplash.com/photo-1630336597270-28e1a7c549b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
         imageAltText: "a red kite with wings spread flying in the sky",
         imageAuthor: "David Adams on Unsplash",
@@ -135,7 +136,7 @@ const birds7Letters = [
     {
         id: "9",
         birdleName: "MOORHEN",
-        name: "Moorhen",
+        name: "moorhen",
         imageUrl: "https://cdn.pixabay.com/photo/2020/04/28/09/43/moorhen-5103686_1280.jpg",
         imageAltText: "a moorhen balancing on a log in water covered with leaves",
         imageAuthor: "",
@@ -146,7 +147,7 @@ const birds7Letters = [
     {
         id: "10",
         birdleName: "LAPWING",
-        name: "Lapwing",
+        name: "lapwing",
         imageUrl: "https://cdn.pixabay.com/photo/2021/09/06/14/06/lapwing-6601790_1280.jpg",
         imageAltText: "a lapwing standing in a grassy area",
         imageAuthor: "",
@@ -157,7 +158,7 @@ const birds7Letters = [
     {
         id: "11",
         birdleName: "BARNOWL",
-        name: "Barn owl",
+        name: "barn owl",
         imageUrl: "https://images.unsplash.com/photo-1600892457290-84afbce878f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2183&q=80",
         imageAltText: "a barn owl flying with a green background",
         imageAuthor: "Bob Brewer on Unsplash",
@@ -168,7 +169,7 @@ const birds7Letters = [
     {
         id: "12",
         birdleName: "SKYLARK",
-        name: "Skylark",
+        name: "skylark",
         imageUrl: "https://images.unsplash.com/photo-1615152408858-e650ef778cd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2875&q=80",
         imageAltText: "a skylark flying on a muted brown background",
         imageAuthor: "Bob Brewer on Unsplash",
@@ -179,7 +180,7 @@ const birds7Letters = [
     {
         id: "13",
         birdleName: "SWALLOW",
-        name: "Swallow",
+        name: "swallow",
         imageUrl: "https://cdn.pixabay.com/photo/2020/05/27/21/42/swallow-flying-5228995_1280.jpg",
         imageAltText: "a swallow flying against a blue sky",
         imageAuthor: "",
@@ -321,9 +322,9 @@ const checkRow = () => {
         flipTile()
         if (birdle === guess) {
             setTimeout(()=> {
+                hintsBtn.style.display = "none"
                 showMessage("Congratulations, you got the Birdle!")
                 getWordle()
-                
             
             }, 4000)
             isGameOver = true
@@ -396,11 +397,11 @@ let birdInfoBody = document.getElementById("bird-info-body")
 birdInfoHeading.innerText = randomBirdle.name
 
 birdInfoBody.innerHTML = `
-<img src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
+<img class="bird-image" src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
 <a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
 
 <p class="info-body">
 ${randomBirdle.birdFacts}
 </p>  
 
-<a href=${randomBirdle.birdFactsUrl}>Info from RSPB</a>`
+<a href=${randomBirdle.birdFactsUrl}>Find more information on the ${randomBirdle.name} on the RSPB</a>`

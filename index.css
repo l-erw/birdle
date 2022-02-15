@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 * {
     color: #2f4f4f;
@@ -10,6 +7,7 @@
 
 body {
     background-color: #fff;
+    background-image: url("./foggy_birds.png");
     width: 500px;
     margin: 0 auto;
 }
@@ -20,9 +18,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 10px;
     max-width: 100%;
     padding: 1em;
+    /* background-color: #fff; */
 }
 
 /* HEADER */
@@ -41,12 +40,12 @@ body {
 
 .title-container > h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #e71f1f
 }
 
 .title-image {
-    width: 50px;
+    width: 40px;
     margin-right: 10px;
 }
 
@@ -60,11 +59,12 @@ body {
     border: none;
     background-color: #fff;
     margin-bottom: 0;
+    padding: 0.125em;
 }
 
 .title-info > .fa-solid {
     color: #e71f1f;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin: 0;
 }
 
@@ -74,6 +74,7 @@ body {
     width: 400px;
     margin-bottom: 20px;
     max-width: 100%;
+    background-color: #fff;
 }
 
 /* @media (max-width: 350px) {
@@ -172,6 +173,8 @@ body {
 
 .row-container3 button:first-child {
     width: 58px;
+    /* background-color: #00CC60;
+    color: #fff; */
 }
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
@@ -194,6 +197,7 @@ body {
 .instructions {
     background-color: #fff;;
     padding: 1.125em 1.125em;
+    max-width: 100%;
     width: 400px;
     margin: 0 auto;
     position: relative;
@@ -216,6 +220,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 0.95rem;
+
 }
 
 h2 {
@@ -229,8 +235,10 @@ h2 {
     font-size: 1.125rem;
 }
 
-.modal-body > img {
+.bird-image {
       width: 90%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 10px;
       align-self: center;
       /* margin-bottom: 1em; */
@@ -257,14 +265,15 @@ h2 {
 
   
 a {
-    font-size: 0.5rem;
+    font-size: 0.65rem;
     margin-top: 0.5em;
 }
 
 .info-body {
-    margin: 0.25em;
+    margin: 0.75em 0.25em;
     padding: 0 1.5em;
-    text-align: justify;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .example-image {
@@ -281,14 +290,19 @@ h3 {
 
 .message-container {
     height: 30px;
-    margin: 0.75em 0;
+    margin: 0.5em 0 0.65em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 
 }
 
 .message {
-    background-color: #ffc0cb;
+    background-color: #0077ff;
+    color: #fff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0.5em 0.75em;
     margin: 0;
 }
 
@@ -340,7 +354,7 @@ h3 {
 
 .footer-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding-top: 0.5em;
     border-top: 3px solid #e71f1f;
@@ -350,10 +364,15 @@ h3 {
 .credits {
     border: none;
     padding: 0.5em 0.75em;
+    margin-right: 0.5em;
     border-radius: 5px;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     background-color: #e71f1f;
     color: #fff;
     font-family: inherit;
     font-weight: 600;
+}
+
+.hint {
+    align-self: flex-end;
 }

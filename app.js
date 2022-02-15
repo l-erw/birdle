@@ -7,7 +7,10 @@
 
 
 const tileDisplay = document.querySelector(".tile-container")
-const keyboard = document.querySelector(".key-container")
+// const keyboard = document.querySelector(".key-container")
+const keyboardRow1 = document.querySelector(".row-container1")
+const keyboardRow2 = document.querySelector(".row-container2")
+const keyboardRow3 = document.querySelector(".row-container3")
 const messageDisplay = document.querySelector(".message-container")
 const infoDisplay = document.getElementById("info-overlay")
 const instructionsDisplay = document.getElementById("instructions-overlay")
@@ -213,7 +216,11 @@ const birdle = randomBirdle.birdleName
 // }
 
 
-const keys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
+// const keys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
+const keysRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
+const keysRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
+const keysRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
+
 
 
 //add variables for different word lengths - below is for 7. Have easy (5), medium (7), hard (9)? 
@@ -245,13 +252,30 @@ guessRows.forEach((guessRow, guessRowIndex)=> {
 })
 
 
-keys.forEach(key => {
+keysRow1.forEach(key => {
     const buttonElement = document.createElement("button")
     buttonElement.textContent = key
     buttonElement.setAttribute('id', key)
     buttonElement.addEventListener('click', () => handleClick(key))
-    keyboard.append(buttonElement)
+    keyboardRow1.append(buttonElement)
 })
+
+keysRow2.forEach(key => {
+    const buttonElement = document.createElement("button")
+    buttonElement.textContent = key
+    buttonElement.setAttribute('id', key)
+    buttonElement.addEventListener('click', () => handleClick(key))
+    keyboardRow2.append(buttonElement)
+})
+
+keysRow3.forEach(key => {
+    const buttonElement = document.createElement("button")
+    buttonElement.textContent = key
+    buttonElement.setAttribute('id', key)
+    buttonElement.addEventListener('click', () => handleClick(key))
+    keyboardRow3.append(buttonElement)
+})
+
 
 const handleClick = (key) => {
     if (!isGameOver){ 

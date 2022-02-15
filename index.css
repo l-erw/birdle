@@ -131,7 +131,8 @@ body {
     background-color: #ebebeb;
     border-radius: 5px;
     border: 1px solid #2f4f4f;
-    margin: 4px;
+    margin: 2px;
+    font-size: 0.75rem;
 }
 
 .key-container button:active {
@@ -140,13 +141,18 @@ body {
     transform: translateY(1px);
   }
 
-.key-container button:nth-child(20),
+/* .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
     width: 68px;
+} */
+
+.row-container3  button:last-child {
+    font-size: 1.1rem;
 }
 
-.key-container button:last-child {
-    font-size: 1.1rem;
+.row-container3 button:first-child,
+.row-container3 button:last-child {
+    width: 68px;
 }
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */

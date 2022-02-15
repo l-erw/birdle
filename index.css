@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     color: #2f4f4f;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -6,6 +10,8 @@
 
 body {
     background-color: #fff;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .game-container {
@@ -13,9 +19,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 5px;
     max-width: 100%;
+    padding: 1em;
 }
 
 /* HEADER */
@@ -65,7 +72,7 @@ body {
 
 .tile-container {
     width: 400px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     max-width: 100%;
 }
 
@@ -117,22 +124,26 @@ body {
 /* KEYBOARD */
 
 .key-container {
-    width: 510px;
+    width: 450px;
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .key-container button {
-    width: 43px;
-    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 45px;
     background-color: #ebebeb;
     border-radius: 5px;
-    border: 1px solid #2f4f4f;
+    border: 1px solid #b1b1b1;
     margin: 2px;
     font-size: 0.75rem;
+    font-weight: 600;
 }
 
 .key-container button:active {
@@ -141,6 +152,14 @@ body {
     transform: translateY(1px);
   }
 
+.row-container1,
+.row-container2,
+.row-container3 {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
     width: 68px;
@@ -148,11 +167,11 @@ body {
 
 .row-container3  button:last-child {
     font-size: 1.1rem;
+    width: 52px;
 }
 
-.row-container3 button:first-child,
-.row-container3 button:last-child {
-    width: 68px;
+.row-container3 button:first-child {
+    width: 58px;
 }
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
@@ -294,7 +313,7 @@ h3 {
 .grey-overlay {
     background-color: #808080 !important;
     color: #fff !important;
-    border: none;
+    border: 1px solid #808080;
 }
 
 .yellow-overlay {
@@ -306,7 +325,7 @@ h3 {
 .green-overlay {
     background-color: #00CC60 !important;
     color: #fff !important;
-    border: none;
+    border: 1px solid #00CC60;
 }
 
 /* FOOTER - CREDITS */

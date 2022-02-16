@@ -2,13 +2,14 @@
 * {
     color: #2f4f4f;
     font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
 
 }
 
 body {
     background-color: #fff;
     background-image: url("./foggy_birds.png");
-    width: 500px;
+    width: 450px;
     margin: 0 auto;
 }
 
@@ -21,7 +22,6 @@ body {
     border-radius: 10px;
     max-width: 100%;
     padding: 1em;
-    /* background-color: #fff; */
 }
 
 /* HEADER */
@@ -51,15 +51,16 @@ body {
 
 .title-buttons {
     margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .title-info {
     color: #e71f1f;
-    font-weight: bold;
     border: none;
     background-color: #fff;
     margin-bottom: 0;
-    padding: 0.125em;
+    padding: 0 0.2em;
 }
 
 .title-info > .fa-solid {
@@ -77,34 +78,6 @@ body {
     background-color: #fff;
 }
 
-/* @media (max-width: 350px) {
-    .tile-container {
-        width: 350px;
-        max-width: 100%;
-    }
-
-    .tile {
-        width: 50px;
-        height: 50px;
-    }
-
-    .key-container {
-        width: 410px;
-    }
-
-    .key-container > button {
-        width: 33px;
-        height: 48px;
-        margin: 1px;
-        font-size: 0.75rem;
-    }
-
-    .key-container button:nth-child(20),
-    .key-container button:nth-child(28) {
-        width: 58px;
-}
-} */
-
 .row {
     display: flex;
 }
@@ -118,7 +91,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 2px;
-    font-weight: 600;
     border-radius: 5px;
 }
 
@@ -144,11 +116,9 @@ body {
     border: 1px solid #b1b1b1;
     margin: 2px;
     font-size: 0.75rem;
-    font-weight: 600;
 }
 
 .key-container button:active {
-    /* background-color: #3e8e41; */
     box-shadow: inset 0px 0px 10px -5px #666;
     transform: translateY(1px);
   }
@@ -161,10 +131,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* .key-container button:nth-child(20),
-.key-container button:nth-child(28) {
-    width: 68px;
-} */
 
 .row-container3  button:last-child {
     font-size: 1.1rem;
@@ -173,8 +139,6 @@ body {
 
 .row-container3 button:first-child {
     width: 58px;
-    /* background-color: #00CC60;
-    color: #fff; */
 }
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
@@ -196,12 +160,12 @@ body {
 .modal,
 .instructions {
     background-color: #fff;;
-    padding: 1.125em 1.125em;
+    padding: 0 0 1.125em 0;
     max-width: 100%;
     width: 400px;
     margin: 0 auto;
     position: relative;
-    top: 17%;
+    top: 12%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -213,6 +177,8 @@ body {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    background-color: #0077ff;
+    border-radius: 10px 10px 0 0;
 }
 
 .modal-body {
@@ -221,18 +187,18 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 0.95rem;
-
+    margin-top: 0.5em;
 }
 
 h2 {
-    margin: 0.5em;
-    margin-left: 0.75em;
+    margin: 0 0 0.25em;
     color: #e71f1f;
     text-transform: uppercase;
 }   
 
 .fa-circle-xmark {
     font-size: 1.125rem;
+    color: #fff;
 }
 
 .bird-image {
@@ -247,22 +213,12 @@ h2 {
 .close-modal {
     align-self: flex-start;
     border: none;
-    background-color: white;
+    background-color: #0077ff;
     width: 25px;
     height: 25px;
-    margin: 0;
+    margin: 0.75em 0.75em 0 0 ;
+
 }
-
-.close-instructions {
-      border: none;
-      background-color: white;
-      width: 25px;
-      height: 25px;
-      margin: 0;
-      align-self: flex-start;
-
-  }
-
   
 a {
     font-size: 0.65rem;
@@ -288,22 +244,22 @@ h3 {
 
 /* MESSAGE */
 
-.message-container {
-    height: 30px;
-    margin: 0.5em 0 0.65em;
+.message-container,
+.slider-container {
+    height: 40px;
+    margin: 0.25em 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
+    width: 100%; 
 }
 
 .message {
     background-color: #0077ff;
     color: #fff;
-    border-radius: 10px;
-    padding: 0.5em 0.75em;
-    margin: 0;
+    margin: 0.25em 1.25em 0;
+    /* padding: 0.5em 0.75em; */
+
 }
 
 /* TILE COLOURS AND ANIMATIONS */
@@ -327,19 +283,19 @@ h3 {
 .grey-overlay {
     background-color: #808080 !important;
     color: #fff !important;
-    border: 1px solid #808080;
+    border: none !important;
 }
 
 .yellow-overlay {
     background-color: #dbc500!important;
     color: #fff !important;
-    border: none;
+    border: none !important;
 }
 
 .green-overlay {
     background-color: #00CC60 !important;
     color: #fff !important;
-    border: 1px solid #00CC60;
+    border: none !important;
 }
 
 /* FOOTER - CREDITS */
@@ -354,25 +310,307 @@ h3 {
 
 .footer-buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-top: 0.5em;
     border-top: 3px solid #e71f1f;
     margin: 0 auto;
 }
 
-.credits {
+.red-btn {
     border: none;
-    padding: 0.5em 0.75em;
-    margin-right: 0.5em;
+    padding: 0.45em 0.5em;
+    margin: 0 0.5em 0 0.2em;
     border-radius: 5px;
     font-size: 0.75rem;
     background-color: #e71f1f;
     color: #fff;
     font-family: inherit;
-    font-weight: 600;
 }
 
-.hint {
-    align-self: flex-end;
+.hint-btn {
+    margin-right: 1em;
 }
+
+.footer-link {
+    text-decoration: none;
+    font-size: 0.75rem;
+    background-color: #13D1BE;
+    padding: 0.65em 1.125em;
+    border-radius: 10px;
+    
+}
+
+
+/* SLIDER */
+output {
+    color: #fff;
+    font-size: 0.95rem;
+    padding-right: 0.25em;
+}
+
+.slidecontainer {
+    width: 40%;
+    background-color: #e71f1f;
+    margin: 1em;
+    padding: 0.35em;
+    border-radius: 5px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #fff;
+    -webkit-transition: .1s;
+    transition: opacity .2s;
+    margin: 0 0.5em;
+    box-shadow: -1px -1px 2px 0px #b2b2b2;
+
+}
+
+.slider::-webkit-slider-thumb:hover,
+.slider::-moz-range-thumb:hover {
+    outline: solid;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px; 
+    height: 16px; 
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer; 
+    box-shadow: -1px -1px 2px 0px #b2b2b2;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px; 
+    background: #fff; 
+    cursor: pointer;
+  }
+
+/* 
+GENERIC CLASSES
+generic overlay /
+generic card for modal /
+generic modal top /
+generic modal body 
+generic heading /
+generic close modal button /
+
+HOW TO PLAY
+button (color?) 
+game example images
+body text - size/spacing, etc. 
+
+BIRD INFO
+message container
+message
+button (color?)
+body text
+link
+
+CREDITS
+links
+button (color?)
+
+STATS (TBC)
+other things - not defined yet! 
+
+/* MODALS FOR BIRD INFO AND INSTRUCTIONS */
+
+.modal--overlay-container {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(219, 218, 218, 0.3);
+}
+
+.modal--card {
+    background-color: #fff;;
+    padding: 0 0 1.125em 0;
+    max-width: 100%;
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 12%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.modal--card-top {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.modal--bird-info-top {
+    background-color: #0077ff;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    margin-top: 0.5em;
+}
+
+.modal--bird-info-heading {
+    margin: 0 0 0.25em;
+    color: #e71f1f;
+    text-transform: uppercase;
+}
+
+.modal--heading {
+    margin: 0.75em;
+    color: #e71f1f;
+    text-transform: uppercase;
+}   
+
+.modal--close {
+    align-self: flex-start;
+    border: none;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 0.75em 0.75em 0 0 ;
+}
+
+.modal--close-bird-info {
+    background-color: #0077ff;
+}
+
+.modal--close-white {
+    font-size: 1.125rem;
+    color: #fff;
+}
+
+.modal--close-red {
+    font-size: 1.125rem;
+    color: #e71f1f;
+}
+
+.bird-image {
+      width: 90%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      align-self: center;
+      /* margin-bottom: 1em; */
+  }
+  
+a {
+    font-size: 0.65rem;
+    margin-top: 0.5em;
+}
+
+.info-body {
+    margin: 0.75em 0.25em;
+    padding: 0 1.5em;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.example-image {
+    max-width: 50%;
+    padding: 0.25em 1em;
+    margin: 0.5em 0;
+}
+
+h3 {
+    margin: 0.5em;
+}
+
+/* MESSAGE */
+
+.message-container,
+.slider-container {
+    height: 40px;
+    margin: 0.25em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+}
+
+.message {
+    background-color: #0077ff;
+    color: #fff;
+    margin: 0.25em 1.25em 0;
+    /* padding: 0.5em 0.75em; */
+
+}
+
+
+
+*/
+
+@media (max-width: 500px) {
+
+    body {
+        width: 375px;
+    }
+
+    .title-container {
+        width: 350px;
+    }
+     
+     .game-container {
+         width: 350px;
+     }
+     
+     .tile-container {
+         width: 350px;
+ 
+     }
+ 
+     .tile {
+         width: 45px;
+         height: 45px;
+     }
+ 
+     .key-container {
+         width: 350px;
+     }
+ 
+     .key-container > button {
+         margin: 1px;
+         font-size: 0.75rem;
+     }
+
+     .modal,
+     .instructions {
+         padding: 0 0 0.75em 0;
+         width: 350px; 
+    }
+
+    .fa-circle-xmark {
+        font-size: 0.75rem;
+    }
+
+
+
+    .close-modal {
+        margin: 0.75em 1.25em 0 0 ;
+    }
+ 
+ }

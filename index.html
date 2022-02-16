@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="instructions-container" id="instructions-overlay">
-        <div class="instructions">
-            <div class="modal-top">
-                <button id="close-instructions" class="close-modal">
-                    <i class="fa-solid fa-circle-xmark"></i>
+    <div class="modal--overlay-container" id="instructions-overlay">
+        <div class="modal--card">
+            <div class="modal--card-top">
+                <button id="close-instructions" class="modal--close">
+                    <i class="fa-solid fa-circle-xmark modal--close-red"></i>
                 </button>  
                     
-                <h2 class="info-heading">HOW TO PLAY</h2>
+                <h2 class="modal--heading">HOW TO PLAY</h2>
             </div>
             
              <div class="modal-body">      
@@ -56,14 +56,15 @@
             </div> 
         </div>
     </div>
-    <div class="modal-container" id="info-overlay">
-        <div class="modal">
-            <div class="modal-top">
-                <button id="close-modal" class="close-modal">
-                    <i class="fa-solid fa-circle-xmark"></i>
+    <div class="modal--overlay-container" id="info-overlay">
+        <div class="modal--card">
+            <div class="modal--card-top modal--bird-info-top">
+                <button id="close-modal" class="modal--close modal--close-bird-info">
+                    <i class="fa-solid fa-circle-xmark modal--close-white"></i>
                 </button>  
+                <div class="message-container"></div>
                     
-                <h2 class="info-heading" id="bird-info-heading"></h2>
+                
             </div>
             <div class="modal-body" id="bird-info-body">
                 
@@ -74,17 +75,22 @@
     <div class="game-container">
         <div class="title-container">
             <div class="title-buttons">
-                <button class="title-info" id="instructions-modal"><i class="fa-solid fa-square-poll-vertical"></i></button>
+                <button class="title-info" id="stats-modal"><i class="fa-solid fa-square-poll-vertical"></i></button>
                 <button class="title-info" id="open-modal"><i class="fa-solid fa-circle-info title-button-disabled"></i></button>
                 <button class="title-info" id="instructions-modal"><i class="fa-solid fa-circle-question"></i></button>
+                <button class="red-btn" id="credits-modal">Credits</button>
             </div>
             
             <h1>BIRDLE</h1>
             <img src="./nest.png" alt="a yellow bird" class="title-image">
             
         </div> 
-        <div class="message-container">
-            <button class="credits hint" id="hint-modal">Get a Hint</button>
+        <div class="slider-container"> 
+            <div class="slidecontainer">
+                <input type="range" min="4" max="10" value="7" class="slider" id="myRange">
+                <output id="rangevalue">7</output>
+              </div>
+            <button class="red-btn hint" id="hint-modal">Get a Hint</button>
         </div>
         <div class="tile-container"></div>
         <div class="key-container">
@@ -95,18 +101,18 @@
     
     <div class="game-container-bottom">
         <div class="footer-buttons">
-            <button class="credits" id="credits-modal">Credits</button>
             
+            <a class="footer-link" href="https://twitter.com/l_erwood">Made by Lizzie Erwood 🦆</a>
 
         </div>
-        <div class="credits-container" id="credits-overlay">
-            <div class="instructions">
-                <div class="modal-top">
-                    <button id="close-credits" class="close-modal">
-                        <i class="fa-solid fa-circle-xmark"></i>
+        <div class="modal--overlay-container" id="credits-overlay">
+            <div class="modal--card">
+                <div class="modal--card-top">
+                    <button id="close-credits" class="modal--close">
+                        <i class="fa-solid fa-circle-xmark modal--close-red"></i>
                     </button> 
 
-                    <h2>CREDITS</h2> 
+                    <h2 class="modal--heading">CREDITS</h2> 
                 </div>
                 
                  <div class="modal-body">      

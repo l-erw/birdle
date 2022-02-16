@@ -30,9 +30,9 @@ const closeModal = document.getElementById("close-modal").addEventListener("clic
     infoDisplay.style.display = "none"
 })
 
-// const openModal = document.getElementById("open-modal").addEventListener("click", function() {
-//     infoDisplay.style.display = "block"
-// } )
+const openModal = document.getElementById("open-modal").addEventListener("click", function() {
+    infoDisplay.style.display = "block"
+} )
 // openModal.classList.add("title-button-enabled")
 
 const openInstructions = document.getElementById("instructions-modal").addEventListener("click", function() {
@@ -392,11 +392,10 @@ const flipTile = () => {
 
 //DISPLAYING THE BIRD INFORMATION AT THE END//
 
-let birdInfoHeading = document.getElementById("bird-info-heading")
 let birdInfoBody = document.getElementById("bird-info-body")
-birdInfoHeading.innerText = randomBirdle.name
 
 birdInfoBody.innerHTML = `
+<h2 class="modal--bird-info-heading" id="bird-info-heading">${randomBirdle.name}</h2>
 <img class="bird-image" src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
 <a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
 

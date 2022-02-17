@@ -4,6 +4,10 @@
 // Find where to remove event listener / handle click function once game is over
 // Add a "not enough letters" notification if enter is pressed before 7 letters
 
+//add all birds into same array, and add letternumber key. 
+//Add function to decide size of grid based on slider position, and then look for values in array that have matching letternumber to the slider value. Then map a new array from the existing one and use that as the thing the randomName is chosen from. OR do like, if letternumber === value then choose randomBirdle from those? 
+//fix insane spacing on the instructions modal
+
 
 
 const tileDisplay = document.querySelector(".tile-container")
@@ -325,8 +329,9 @@ const checkRow = () => {
                 hintsBtn.style.display = "none"
                 showMessage("Congratulations, you got the Birdle!")
                 getWordle()
-            
+                
             }, 4000)
+            displayBirdInfo()
             isGameOver = true
         } else {
             if (currentRow >= 5) {
@@ -394,13 +399,17 @@ const flipTile = () => {
 
 let birdInfoBody = document.getElementById("bird-info-body")
 
-birdInfoBody.innerHTML = `
-<h2 class="modal--bird-info-heading" id="bird-info-heading">${randomBirdle.name}</h2>
-<img class="bird-image" src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
-<a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
+function displayBirdInfo() {
+    birdInfoBody.innerHTML = `
+        <h2 class="modal--bird-info-heading" id="bird-info-heading">${randomBirdle.name}</h2>
+        <img class="bird-image" src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
+        <a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
 
-<p class="info-body">
-${randomBirdle.birdFacts}
-</p>  
+        <p class="info-body">
+        ${randomBirdle.birdFacts}
+        </p>  
 
-<a href=${randomBirdle.birdFactsUrl}>Find more information on the ${randomBirdle.name} on the RSPB</a>`
+        <a href=${randomBirdle.birdFactsUrl}>Find more information on the ${randomBirdle.name} on the RSPB</a>`
+}
+
+

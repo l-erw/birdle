@@ -226,7 +226,15 @@ a {
 }
 
 .info-body {
-    margin: 0.75em 0.25em;
+  
+    padding: 0 0.25em;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.how-to-body {
+    font-weight: 300;
+    margin: 0.25em 0.25em;
     padding: 0 1.5em;
     line-height: 1.5;
     font-size: 0.95rem;
@@ -560,9 +568,11 @@ h3 {
 
 }
 
+.modal-body > p {
+    padding: 1em;
+    text-align: center;
+}
 
-
-*/
 
 @media (max-width: 500px) {
 
@@ -597,8 +607,7 @@ h3 {
          font-size: 0.75rem;
      }
 
-     .modal,
-     .instructions {
+     .modal--card {
          padding: 0 0 0.75em 0;
          width: 350px; 
     }
@@ -607,9 +616,7 @@ h3 {
         font-size: 0.75rem;
     }
 
-
-
-    .close-modal {
+    .modal--close {
         margin: 0.75em 1.25em 0 0 ;
     }
  

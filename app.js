@@ -11,7 +11,6 @@
 
 
 const tileDisplay = document.querySelector(".tile-container")
-// const keyboard = document.querySelector(".key-container")
 const keyboardRow1 = document.querySelector(".row-container1")
 const keyboardRow2 = document.querySelector(".row-container2")
 const keyboardRow3 = document.querySelector(".row-container3")
@@ -21,7 +20,7 @@ const instructionsDisplay = document.getElementById("instructions-overlay")
 const creditsDisplay = document.getElementById("credits-overlay")
 const hintsBtn = document.getElementById("hint-modal")
 
-
+// Open/close modals in title bar
 const openCredits = document.getElementById("credits-modal").addEventListener("click", function() {
     creditsDisplay.style.display = "block"
 })
@@ -37,7 +36,7 @@ const closeModal = document.getElementById("close-modal").addEventListener("clic
 const openModal = document.getElementById("open-modal").addEventListener("click", function() {
     infoDisplay.style.display = "block"
 } )
-// openModal.classList.add("title-button-enabled")
+
 
 const openInstructions = document.getElementById("instructions-modal").addEventListener("click", function() {
     instructionsDisplay.style.display = "block"
@@ -47,9 +46,86 @@ const closeInstructions = document.getElementById("close-instructions").addEvent
     instructionsDisplay.style.display = "none"
 })
 
-const birds7Letters = [
+//Bird info
+
+const birds = [
+    {
+        id: 1,
+        letterNumber: 4,
+        birdleName: "SWAN",
+        name: "swan",
+        imageUrl: "https://images.unsplash.com/photo-1644195543725-d7c2a7281287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a swan with its wings raised slightly, swimming in a lake",
+        imageAuthor: "Chris Linnett on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/aJCdV-yAWO4",
+        birdFacts: "The mute swan is a very large white waterbird. It has a long S-shaped neck and an orange bill with a black base and a black knob. It flies with its neck extended and regular, slow wingbeats. The population in the UK has increased recently, perhaps due to better protection of this species. The problem of lead poisoning on lowland rivers has also largely been solved by a ban on the sale of lead fishing weights. Some birds stay in their territories all year, while others move short distances and form winter flocks. In cold weather, some birds arrive from Europe into eastern England.",
+        birdFactsUrl: "mute-swan/"
+    },
+    {
+        id: 2,
+        letterNumber: 5,
+        birdleName: "RAVEN",
+        name: "raven",
+        imageUrl: "https://images.unsplash.com/photo-1594563144007-08462601c1b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a raven standing in a grassy field",
+        imageAuthor: "Nico Meier on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/tpFdcpCGG9M",
+        birdFacts: "The common raven is massive - the biggest member of the crow family. It is all black with a large bill, and long wings. In flight, it shows a diamond-shaped tail. Ravens breed mainly in the west and north although they are currently expanding their range eastwards. Most birds are residents, though some birds - especially non-breeders and young birds - wander from their breeding areas but do not travel far. Ravens are best looked for in upland areas of south-west England, Wales, the north Pennines and Lake District and much of Scotland.",
+        birdFactsUrl: "raven/"
+//double check this IS a raven
+
+    },
+    {
+        id: 6,
+        letterNumber: 6,
+        birdleName: "CUCKOO",
+        name: "cuckoo",
+        imageUrl: "https://cdn.pixabay.com/photo/2020/08/10/20/19/bird-5478714_1280.jpg",
+        imageAltText: "a cuckoo sitting on a wooden pole with a green background",
+        imageAuthor: "maroj10",
+        imageAuthorUrl: "https://pixabay.com/photos/bird-eurasian-cuckoo-feathers-5478714/",
+        birdFacts: "The cuckoo is a dove-sized bird with blue grey upper parts, head and chest with dark barred white under parts. With their sleek body, long tail and pointed wings they are not unlike kestrels or sparrowhawks. Sexes are similar and the young are brown. They are summer visitors and well-known brood parasites, the females laying their eggs in the nests of other birds, especially meadow pipits, dunnocks and reed warblers. Their recent population decline makes this a Red List species.",
+        birdFactsUrl: "cuckoo/"
+    },
+    {
+        id: 8,
+        letterNumber: 8,
+        birdleName: "PHEASANT",
+        name: "pheasant",
+        imageUrl: "https://images.unsplash.com/photo-1618219429890-f76dfd963810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+        imageAltText: "a pheasant standing in a grassy area",
+        imageAuthor: "Julie Mayo on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/5JkO2Wyrazk",
+        birdFacts: "Pheasants are large, long-tailed gamebirds. The males have rich chestnut, golden-brown and black markings on their bodies and tails, with a dark green head and red face wattling. Females are mottled with paler brown and black. They were introduced to the UK long ago and more recent introductions have brought in a variety of races and breeds for sport shooting. You can see pheasants across most of the UK. They are least common in upland and urban areas. They can usually be seen in the open countryside near woodland edges, copses and hedgerows.",
+        birdFactsUrl: "pheasant/"
+    },
+    {
+        id: 9,
+        letterNumber: 9,
+        birdleName: "GOLDFINCH",
+        name: "goldfinch",
+        imageUrl: "https://images.unsplash.com/photo-1589142911133-a1708d18c26e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        imageAltText: "a goldfinch perched on the end of a green thistle",
+        imageAuthor: "Steve Harrris on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/gjTk9N8hYME",
+        birdFacts: "The goldfinch is a highly coloured finch with a bright red face and yellow wing patch. Sociable, often breeding in loose colonies, they have a delightful liquid twittering song and call. Their long fine beaks allow them to extract otherwise inaccessible seeds from thistles and teasels. Increasingly they are visiting bird tables and feeders. In winter many UK goldfinches migrate as far south as Spain. Goldfinches can be seen anywhere there are scattered bushes and trees, rough ground with thistles and other seeding plants.",
+        birdFactsUrl: "goldfinch/"
+    },
+    {
+        id: 10,
+        letterNumber: 10,
+        birdleName: "KINGFISHER",
+        name: "kingfisher",
+        imageUrl: "https://images.unsplash.com/photo-1626293580936-051171d7faa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a kingfisher sitting on a mossy rock",
+        imageAuthor: "Jonny Gios on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/StHVlMoSN3M",
+        birdFacts: "Kingfishers are small unmistakable bright blue and orange birds of slow moving or still water. They fly rapidly, low over water, and hunt    fish from riverside perches, occasionally hovering above the water's surface. They are vulnerable to hard winters and habitat degradation through pollution or unsympathetic management of watercourses. Kingfishers are amber listed because of their unfavourable conservation status in Europe. They are also listed as a Schedule 1 species under the Wildlife and Countryside Act offering them additional protection.",
+        birdFactsUrl: "/kingfisher/"
+    },
     {
         id: "1",
+        letterNumber: 7,
         birdleName: "KESTREL",
         name: "kestrel",
         imageUrl: "https://images.unsplash.com/photo-1614522433183-b620ffdad59b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1570&q=80",
@@ -57,11 +133,11 @@ const birds7Letters = [
         imageAuthor: "Bob Brewer on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/UfyDkU1uVX0",
         birdFacts: "Kestrels are a familiar sight with their pointed wings and long tail, hovering beside a roadside verge. Numbers of kestrels have declined since the 1970s, probably as a result of changes in farming and so it is included on the Amber List. They have adapted readily to man-made environments and can survive right in the centre of cities. Kestrels are found in a wide variety of habitats, from moor and heath, to farmland and urban areas. The only places they do not favour are dense forests, vast treeless wetlands and mountains.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/kestrel/"
-        //can I have the root of the urls hardcoded and then add the end bits in from this
+        birdFactsUrl: "kestrel/"
     },
     {
         id: "2",
+        letterNumber: 7,
         birdleName: "SPARROW",
         name: "sparrow",
         imageUrl: "https://images.unsplash.com/photo-1591804203147-4a2377cf721d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3028&q=80",
@@ -69,10 +145,11 @@ const birds7Letters = [
         imageAuthor: "Adam Anderson on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/9stPdv50NMc",
         birdFacts: "Noisy and gregarious, these cheerful exploiters of man's rubbish and wastefulness have managed to colonise most of the world. The ultimate avian opportunist perhaps. Monitoring suggests a severe decline in the UK house sparrow population, recently estimated as dropping by 71 per cent between 1977 and 2008 with substantial declines in both rural and urban populations. House sparrows can be found from the centre of cities to the farmland of the countryside, they feed and breed near to people.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/house-sparrow/"
+        birdFactsUrl: "house-sparrow/"
     },
     {
         id: "3",
+        letterNumber: 7,
         birdleName: "BLUETIT",
         name: "blue tit",
         imageUrl: "https://images.unsplash.com/photo-1606396191258-99a611410bcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80",
@@ -80,10 +157,11 @@ const birds7Letters = [
         imageAuthor: "Amee Fairbank-Brown on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/Jc9pijSwYjY",
         birdFacts: "A colourful mix of blue, yellow, white and green makes the blue tit one of our most attractive and most recognisable garden visitors. In winter, family flocks join up with other tits as they search for food. A garden with four or five blue tits at a feeder at any one time may be feeding 20 or more. Blue tits are common in woodland, hedgerows, parks and gardens. They're widespread and found across the whole of the UK with the exception of some Scottish islands.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/blue-tit/"
+        birdFactsUrl: "blue-tit/"
     },
     {
         id: "4",
+        letterNumber: 7,
         birdleName:"BITTERN",
         name: "bittern",
         imageUrl: "https://cdn.pixabay.com/photo/2021/07/15/14/26/bittern-6468623_1280.jpg",
@@ -91,10 +169,11 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "The bittern is a thickset heron with all-over bright, pale, buffy-brown plumage covered with dark streaks and bars. It flies on broad, rounded, bowed wings. A secretive bird, very difficult to see, as it moves silently through reeds at water's edge, looking for fish. The males make a remarkable far-carrying, booming sound in spring. It's very small, reedbed-dependent population make it an Amber List species. It is also a Schedule 1 species.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/bittern"
+        birdFactsUrl: "bittern/"
     },
     {
         id: "5",
+        letterNumber: 7,
         birdleName: "BUZZARD",
         name: "buzzard",
         imageUrl: "https://cdn.pixabay.com/photo/2022/02/01/11/59/buzzard-6986163_1280.jpg",
@@ -102,10 +181,11 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "Now the commonest and most widespread UK bird of prey. The buzzard is quite large with broad, rounded wings, and a short neck and tail. When gliding and soaring it will often hold its wings in a shallow 'V' and the tail is fanned. Greatest numbers of buzzards can be found in Scotland, Wales, the Lake District and SW England, but now breeding in every county of the UK. They are found in most habitats particularly woodland, moorland, scrub, pasture, arable, marsh bog and villages.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/buzzard/"
+        birdFactsUrl: "buzzard/"
     },
     {
         id: "6",
+        letterNumber: 7,
         birdleName: "COALTIT",
         name: "Coal tit",
         imageUrl: "https://images.unsplash.com/photo-1643985209176-a372071b4706?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2026&q=80",
@@ -113,10 +193,11 @@ const birds7Letters = [
         imageAuthor: "Joe Straker on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/Ww__D24NK2o",
         birdFacts: "The coal tit has a distinctive grey back, black cap, and white patch at the back of its neck. Its smaller, more slender bill than blue or great tits means it can feed more successfully in conifers. A regular visitor to most feeders, they will take and store food for eating later. In winter they join with other tits to form flocks which roam through woodlands and gardens in search of food. Coal tits can be seen in woodland, especially conifer woods, parks and gardens.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/coal-tit/"
+        birdFactsUrl: "coal-tit/"
     },
     {
         id: "7",
+        letterNumber: 7,
         birdleName: "GOSHAWK",
         name: "goshawk",
         imageUrl: "https://cdn.pixabay.com/photo/2021/10/10/09/19/goshawk-6696074_1280.jpg",
@@ -124,10 +205,11 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "The goshawk is a large hawk. When up close it has a fierce expression with bright red eyes and a distinctive white eyebrow. Its broad wings enable it to hunt at high speed, weaving in and out of trees, and its long legs and talons can catch its prey in flight. In late winter and spring it has a 'sky-dance' display. Goshawks are a Schedule 1 species. They are still persecuted and their nests are frequently robbed. Best looked for near large areas of woodland and forests with glades and paths for it to hunt along. They can also be seen hunting over more open countryside.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/goshawk/"
+        birdFactsUrl: "goshawk/"
     },
     {
         id: "8",
+        letterNumber: 7,
         birdleName: "REDKITE",
         name: "red kite",
         imageUrl: "https://images.unsplash.com/photo-1630336597270-28e1a7c549b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
@@ -135,10 +217,11 @@ const birds7Letters = [
         imageAuthor: "David Adams on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/z1ZTWBn5Eeg",
         birdFacts: "This magnificently graceful bird of prey is unmistakable with its reddish-brown body, angled wings and deeply forked tail. It was saved from national extinction by one of the world's longest-running protection programmes. It has now been successfully re-introduced to England and Scotland. Red kites are listed under Schedule 1 of The Wildlife and Countryside Act. Central Wales, central England - especially the Chilterns, central Scotland - at Argaty and along the Galloway Kite Trail are the best areas to find them.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/red-kite/"
+        birdFactsUrl: "red-kite/"
     },
     {
         id: "9",
+        letterNumber: 7,
         birdleName: "MOORHEN",
         name: "moorhen",
         imageUrl: "https://cdn.pixabay.com/photo/2020/04/28/09/43/moorhen-5103686_1280.jpg",
@@ -146,10 +229,11 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "Moorhens are blackish with a red and yellow beak and long, green legs. Seen closer-up, they have a dark brown back and wings and a more bluish-black belly, with white stripes on the flanks. You can see moorhens around any pond, lake, stream or river, or even ditches in farmland. Moorhens can live in cities as well as the countryside. In the UK they breed in in lowland areas, especially in central and eastern England.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/moorhen/"
+        birdFactsUrl: "moorhen/"
     },
     {
         id: "10",
+        letterNumber: 7,
         birdleName: "LAPWING",
         name: "lapwing",
         imageUrl: "https://cdn.pixabay.com/photo/2021/09/06/14/06/lapwing-6601790_1280.jpg",
@@ -157,10 +241,11 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "Also known as the peewit in imitation of its display calls, its proper name describes its wavering flight. Its black and white appearance and round-winged shape in flight make it distinctive, even without its splendid crest. This familiar farmland bird has suffered significant declines recently and is now a Red List species. Lapwings are found on farmland throughout the UK particularly in lowland areas of northern England, the Borders and eastern Scotland. In the breeding season prefer spring sown cereals, root crops, permanent unimproved pasture, meadows and fallow fields.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/lapwing/"
+        birdFactsUrl: "lapwing/"
     },
     {
         id: "11",
+        letterNumber: 7,
         birdleName: "BARNOWL",
         name: "barn owl",
         imageUrl: "https://images.unsplash.com/photo-1600892457290-84afbce878f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2183&q=80",
@@ -168,10 +253,11 @@ const birds7Letters = [
         imageAuthor: "Bob Brewer on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/DohCyud44t4",
         birdFacts: "With heart-shaped face, buff back and wings and pure white underparts, the barn owl is a distinctive and much-loved countryside bird. Widely distributed across the UK, and indeed the world, this bird has suffered declines through the 20th century and is thought to have been adversely affected by organochlorine pesticides such as DDT in the 1950s and '60s. Barn owls can be seen in open country, along field edges, riverbanks and roadside verges.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/barn-owl/"
+        birdFactsUrl: "barn-owl/"
     },
     {
         id: "12",
+        letterNumber: 7,
         birdleName: "SKYLARK",
         name: "skylark",
         imageUrl: "https://images.unsplash.com/photo-1615152408858-e650ef778cd4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2875&q=80",
@@ -179,10 +265,11 @@ const birds7Letters = [
         imageAuthor: "Bob Brewer on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/y3jsWdA0pBQ",
         birdFacts: "The skylark is a small brown bird, somewhat larger than a sparrow but smaller than a starling. It is streaky brown with a small crest, which can be raised when the bird is excited or alarmed, and a white-sided tail. The wings also have a white rear edge, visible in flight. It is renowned for its display flight, vertically up in the air. Its recent and dramatic population declines make it a Red List species. Likes open countryside, from lowland farmland to upland moorland. Often inconspicuous on the ground, it is easy to see when in its distinctive song flight.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/skylark/"
+        birdFactsUrl: "skylark/"
     },
     {
         id: "13",
+        letterNumber: 7,
         birdleName: "SWALLOW",
         name: "swallow",
         imageUrl: "https://cdn.pixabay.com/photo/2020/05/27/21/42/swallow-flying-5228995_1280.jpg",
@@ -190,12 +277,13 @@ const birds7Letters = [
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "Swallows are small birds with dark, glossy-blue backs, red throats, pale underparts and long tail streamers. They are extremely agile in flight and spend most of their time on the wing. They are widespread breeding birds in the Northern Hemisphere, migrating south in winter. Swallows are found in areas where there is a ready and accessible supply of small insects. They are particularly fond of open pasture with access to water and quiet farm buildings. Large reedbeds in late summer and early autumn can be good places to look for pre-migration roosts.",
-        birdFactsUrl: "https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/swallow"
+        birdFactsUrl: "swallow/"
     }
 
 ]
 
-let randomBirdle = birds7Letters[Math.floor(Math.random() * birds7Letters.length)]
+//selects a random bird from the birds array (based on word length)
+let randomBirdle = birds[Math.floor(Math.random() * birds.length)]
 
 const birdle = randomBirdle.birdleName
 
@@ -221,40 +309,54 @@ const birdle = randomBirdle.birdleName
 // }
 
 
-// const keys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
+// set up for keyboard
 const keysRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
 const keysRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
 const keysRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
 
 
-
-//add variables for different word lengths - below is for 7. Have easy (5), medium (7), hard (9)? 
-
-const guessRows = [
-    ["", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", ""]
-]
-
+let guessRows = []
 let currentRow = 0
 let currentTile = 0
 let isGameOver = false
+const rows = 6
+let columns = 7
+let sliderValue 
+let slider = document.getElementById("wordLength");
+let output = document.getElementById("rangevalue");
 
-guessRows.forEach((guessRow, guessRowIndex)=> {
-    const rowElement = document.createElement("div")
-    rowElement.setAttribute("id", "guessRow-" + guessRowIndex)
-    rowElement.classList.add("row")
-    guessRow.forEach((_guess, guessIndex) => {
-        const tileElement = document.createElement("div")
-        tileElement.setAttribute("id", "guessRow-" + guessRowIndex + "-tile-" + guessIndex)
-        tileElement.classList.add("tile")
-        rowElement.append(tileElement) 
-    })
-    tileDisplay.append(rowElement)
-})
+
+function createGrid() {
+    tileDisplay.innerHTML = ""
+    for (let i = 0; i < rows; i++) {
+        guessRows[i] = [""]
+        for (let j = 0; j < columns; j++) {
+        guessRows[i][j] = ""
+        }
+    }
+
+    guessRows.forEach((guessRow, guessRowIndex)=> {
+        const rowElement = document.createElement("div")
+        rowElement.setAttribute("id", "guessRow-" + guessRowIndex)
+        rowElement.classList.add("row")
+        guessRow.forEach((_guess, guessIndex) => {
+            const tileElement = document.createElement("div")
+            tileElement.setAttribute("id", "guessRow-" + guessRowIndex + "-tile-" + guessIndex)
+            tileElement.classList.add("tile")
+            rowElement.append(tileElement) 
+        })
+        tileDisplay.append(rowElement)
+    })      
+}
+
+createGrid()
+
+slider.oninput = function() {
+    sliderValue = slider.value
+    output.value = slider.value
+    columns = sliderValue
+    createGrid()
+}
 
 
 keysRow1.forEach(key => {
@@ -409,7 +511,7 @@ function displayBirdInfo() {
         ${randomBirdle.birdFacts}
         </p>  
 
-        <a href=${randomBirdle.birdFactsUrl}>Find more information on the ${randomBirdle.name} on the RSPB</a>`
+        <a href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/${randomBirdle.birdFactsUrl}" target="_blank">Find more information on the ${randomBirdle.name} on the RSPB</a>`
 }
 
 

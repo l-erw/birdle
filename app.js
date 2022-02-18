@@ -68,8 +68,6 @@ const birds = [
         imageAuthorUrl: "https://unsplash.com/photos/tpFdcpCGG9M",
         birdFacts: "The common raven is massive - the biggest member of the crow family. It is all black with a large bill, and long wings. In flight, it shows a diamond-shaped tail. Ravens breed mainly in the west and north although they are currently expanding their range eastwards. Most birds are residents, though some birds - especially non-breeders and young birds - wander from their breeding areas but do not travel far. Ravens are best looked for in upland areas of south-west England, Wales, the north Pennines and Lake District and much of Scotland.",
         birdFactsUrl: "raven/"
-//double check this IS a raven
-
     },
     {
         id: 6,
@@ -117,7 +115,7 @@ const birds = [
         imageAuthor: "Jonny Gios on Unsplash",
         imageAuthorUrl: "https://unsplash.com/photos/StHVlMoSN3M",
         birdFacts: "Kingfishers are small unmistakable bright blue and orange birds of slow moving or still water. They fly rapidly, low over water, and hunt    fish from riverside perches, occasionally hovering above the water's surface. They are vulnerable to hard winters and habitat degradation through pollution or unsympathetic management of watercourses. Kingfishers are amber listed because of their unfavourable conservation status in Europe. They are also listed as a Schedule 1 species under the Wildlife and Countryside Act offering them additional protection.",
-        birdFactsUrl: "/kingfisher/"
+        birdFactsUrl: "kingfisher/"
     },
     {
         id: "1",
@@ -162,8 +160,8 @@ const birds = [
         name: "bittern",
         imageUrl: "https://cdn.pixabay.com/photo/2021/07/15/14/26/bittern-6468623_1280.jpg",
         imageAltText: "a bittern flying low through some reeds",
-        imageAuthor: "",
-        imageAuthorUrl: "",
+        imageAuthor: "--",
+        imageAuthorUrl: "--",
         birdFacts: "The bittern is a thickset heron with all-over bright, pale, buffy-brown plumage covered with dark streaks and bars. It flies on broad, rounded, bowed wings. A secretive bird, very difficult to see, as it moves silently through reeds at water's edge, looking for fish. The males make a remarkable far-carrying, booming sound in spring. It's very small, reedbed-dependent population make it an Amber List species. It is also a Schedule 1 species.",
         birdFactsUrl: "bittern/"
     },
@@ -174,8 +172,8 @@ const birds = [
         name: "buzzard",
         imageUrl: "https://cdn.pixabay.com/photo/2022/02/01/11/59/buzzard-6986163_1280.jpg",
         imageAltText: "a buzzard flying in the sky",
-        imageAuthor: "",
-        imageAuthorUrl: "",
+        imageAuthor: "--",
+        imageAuthorUrl: "--",
         birdFacts: "Now the commonest and most widespread UK bird of prey. The buzzard is quite large with broad, rounded wings, and a short neck and tail. When gliding and soaring it will often hold its wings in a shallow 'V' and the tail is fanned. Greatest numbers of buzzards can be found in Scotland, Wales, the Lake District and SW England, but now breeding in every county of the UK. They are found in most habitats particularly woodland, moorland, scrub, pasture, arable, marsh bog and villages.",
         birdFactsUrl: "buzzard/"
     },
@@ -198,8 +196,8 @@ const birds = [
         name: "goshawk",
         imageUrl: "https://cdn.pixabay.com/photo/2021/10/10/09/19/goshawk-6696074_1280.jpg",
         imageAltText: "a goshawk standing on a mossy log",
-        imageAuthor: "",
-        imageAuthorUrl: "",
+        imageAuthor: "--",
+        imageAuthorUrl: "--",
         birdFacts: "The goshawk is a large hawk. When up close it has a fierce expression with bright red eyes and a distinctive white eyebrow. Its broad wings enable it to hunt at high speed, weaving in and out of trees, and its long legs and talons can catch its prey in flight. In late winter and spring it has a 'sky-dance' display. Goshawks are a Schedule 1 species. They are still persecuted and their nests are frequently robbed. Best looked for near large areas of woodland and forests with glades and paths for it to hunt along. They can also be seen hunting over more open countryside.",
         birdFactsUrl: "goshawk/"
     },
@@ -222,8 +220,8 @@ const birds = [
         name: "moorhen",
         imageUrl: "https://cdn.pixabay.com/photo/2020/04/28/09/43/moorhen-5103686_1280.jpg",
         imageAltText: "a moorhen balancing on a log in water covered with leaves",
-        imageAuthor: "",
-        imageAuthorUrl: "",
+        imageAuthor: "--",
+        imageAuthorUrl: "--",
         birdFacts: "Moorhens are blackish with a red and yellow beak and long, green legs. Seen closer-up, they have a dark brown back and wings and a more bluish-black belly, with white stripes on the flanks. You can see moorhens around any pond, lake, stream or river, or even ditches in farmland. Moorhens can live in cities as well as the countryside. In the UK they breed in in lowland areas, especially in central and eastern England.",
         birdFactsUrl: "moorhen/"
     },
@@ -234,8 +232,8 @@ const birds = [
         name: "lapwing",
         imageUrl: "https://cdn.pixabay.com/photo/2021/09/06/14/06/lapwing-6601790_1280.jpg",
         imageAltText: "a lapwing standing in a grassy area",
-        imageAuthor: "",
-        imageAuthorUrl: "",
+        imageAuthor: "--",
+        imageAuthorUrl: "--",
         birdFacts: "Also known as the peewit in imitation of its display calls, its proper name describes its wavering flight. Its black and white appearance and round-winged shape in flight make it distinctive, even without its splendid crest. This familiar farmland bird has suffered significant declines recently and is now a Red List species. Lapwings are found on farmland throughout the UK particularly in lowland areas of northern England, the Borders and eastern Scotland. In the breeding season prefer spring sown cereals, root crops, permanent unimproved pasture, meadows and fallow fields.",
         birdFactsUrl: "lapwing/"
     },
@@ -270,8 +268,8 @@ const birds = [
         name: "swallow",
         imageUrl: "https://cdn.pixabay.com/photo/2020/05/27/21/42/swallow-flying-5228995_1280.jpg",
         imageAltText: "a swallow flying against a blue sky",
-        imageAuthor: "",
-        imageAuthorUrl: "",
+        imageAuthor: "--",
+        imageAuthorUrl: "--",
         birdFacts: "Swallows are small birds with dark, glossy-blue backs, red throats, pale underparts and long tail streamers. They are extremely agile in flight and spend most of their time on the wing. They are widespread breeding birds in the Northern Hemisphere, migrating south in winter. Swallows are found in areas where there is a ready and accessible supply of small insects. They are particularly fond of open pasture with access to water and quiet farm buildings. Large reedbeds in late summer and early autumn can be good places to look for pre-migration roosts.",
         birdFactsUrl: "swallow/"
     }
@@ -314,7 +312,7 @@ let currentRow = 0
 let currentTile = 0
 let isGameOver = false
 const rows = 6
-let columns = 7
+let columns = 4
 let sliderValue 
 let slider = document.getElementById("wordLength");
 let output = document.getElementById("rangevalue");
@@ -348,23 +346,23 @@ createGrid()
 
 function getBirdle() {
     let birdWordLength = birds.filter(bird => bird.letterNumber === columns)
+    console.log(birdWordLength)
     randomBirdle = birdWordLength[Math.floor(Math.random() * birdWordLength.length)]
     console.log(randomBirdle)
-    birdle = randomBirdle.birdleName && birds.birdleName
+    birdle = randomBirdle.birdleName
     console.log(birdle)
 }
-
 
 getBirdle()
 
 //this changes the size of the grid based on the value from the slider
 slider.oninput = function() {
+    //clear keyboard and current board, set new birdle
     sliderValue = slider.value
     output.value = slider.value
     columns = sliderValue
     createGrid()
-    getBirdle()
-   
+    //get birdle
 }
 
 // creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
@@ -420,7 +418,6 @@ const addLetter = (letter) => {
 
 }
 
-let timeLapsed = 1000
 
 const deleteLetter = () => {
     if (currentTile > 0) {
@@ -438,6 +435,12 @@ const checkRow = () => {
     if (currentTile > (columns-1)) {
         flipTile()
         if (birdle === guess) {
+            if (columns >= 9) {
+                timeLapsed = 5000
+            } else if (columns > 6) {
+                timeLapsed = 4000
+            } else {
+                timeLapsed = 3000 } 
             setTimeout(()=> {
                 hintsBtn.style.display = "none"
                 showMessage("Congratulations, you got the Birdle!")
@@ -450,7 +453,7 @@ const checkRow = () => {
             if (currentRow >= 5) {
                 setTimeout(() => {
                     showMessage(`Here's the Birdle, better luck next time!`)
-                }, 4000)
+                    }, 4000)
                 displayBirdInfo()
                 isGameOver = true
                 return

@@ -1,11 +1,9 @@
 //TO DO
 // 1. link up dictionary API 
 // Add a "not enough letters" notification if enter is pressed before 7 letters
-
-//add all birds into same array, and add letternumber key. 
-//Add function to decide size of grid based on slider position, and then look for values in array that have matching letternumber to the slider value. Then map a new array from the existing one and use that as the thing the randomName is chosen from. OR do like, if letternumber === value then choose randomBirdle from those? 
+//Add function to decide size of grid based on slider position, and then look for values in array that have matching letternumber to the slider value. 
 //fix insane spacing on the instructions modal
-
+//if slider changes value in the middle of the game, reset whole game, choose new Birdle, reset tiles and keyboard
 
 
 const tileDisplay = document.querySelector(".tile-container")
@@ -281,10 +279,7 @@ const birds = [
 ]
 
 //selects a random bird from the birds array (based on word length)
-let randomBirdle = birds[Math.floor(Math.random() * birds.length)]
-
-const birdle = randomBirdle.birdleName
-
+// let randomBirdle = birds[Math.floor(Math.random() * birds.length)]
 
 
 // const getWordle = () => {
@@ -308,6 +303,7 @@ const birdle = randomBirdle.birdleName
 
 
 // set up for keyboard
+
 const keysRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
 const keysRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
 const keysRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
@@ -322,6 +318,7 @@ let columns = 7
 let sliderValue 
 let slider = document.getElementById("wordLength");
 let output = document.getElementById("rangevalue");
+
 
 //this creates the grid for word guesses
 function createGrid() {
@@ -348,12 +345,26 @@ function createGrid() {
 }
 
 createGrid()
+
+function getBirdle() {
+    let birdWordLength = birds.filter(bird => bird.letterNumber === columns)
+    randomBirdle = birdWordLength[Math.floor(Math.random() * birdWordLength.length)]
+    console.log(randomBirdle)
+    birdle = randomBirdle.birdleName && birds.birdleName
+    console.log(birdle)
+}
+
+
+getBirdle()
+
 //this changes the size of the grid based on the value from the slider
 slider.oninput = function() {
     sliderValue = slider.value
     output.value = slider.value
     columns = sliderValue
     createGrid()
+    getBirdle()
+   
 }
 
 // creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
@@ -397,9 +408,8 @@ const handleClick = (key) => {
 }
 
 //this adds new letters to the grid and checks for the whether a row is full
-//need to figure out how to get slider value into here to check tile number
 const addLetter = (letter) => {
-    if (currentTile < 7 && currentRow < 6) {
+    if (currentTile < columns && currentRow < 6) {
         const tile = document.getElementById(`guessRow-${currentRow}-tile-${currentTile}`)
         tile.textContent = letter
         guessRows[currentRow][currentTile] = letter
@@ -409,6 +419,8 @@ const addLetter = (letter) => {
     }
 
 }
+
+let timeLapsed = 1000
 
 const deleteLetter = () => {
     if (currentTile > 0) {
@@ -420,27 +432,27 @@ const deleteLetter = () => {
     }
     
 }
-
+//if columns < 7 then reduce timeout, 
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
-//need to get slider value into here as well 
-    if (currentTile > 6) {
+    if (currentTile > (columns-1)) {
         flipTile()
         if (birdle === guess) {
             setTimeout(()=> {
                 hintsBtn.style.display = "none"
                 showMessage("Congratulations, you got the Birdle!")
-                getWordle()
+                // getWordle()
                 
-            }, 4000)
+            }, timeLapsed)
             displayBirdInfo()
             isGameOver = true
         } else {
             if (currentRow >= 5) {
                 setTimeout(() => {
-                    showMessage(`Game Over - the Birdle was ${birdle}`)
+                    showMessage(`Here's the Birdle, better luck next time!`)
                 }, 4000)
-                isGameOver = false
+                displayBirdInfo()
+                isGameOver = true
                 return
             }
             if (currentRow < 5) {

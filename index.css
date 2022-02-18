@@ -1,4 +1,7 @@
-
+:root {
+    --colour-primary: #e71f1f;
+    --colour-body: #2f4f4f;
+}
 * {
     color: #2f4f4f;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -9,7 +12,7 @@
 body {
     background-color: #fff;
     background-image: url("./foggy_birds.png");
-    width: 450px;
+    width: 350px;
     margin: 0 auto;
 }
 
@@ -27,7 +30,7 @@ body {
 /* HEADER */
 
 .title-container {
-    width: 510px;
+    width: 350px;
     max-width: 100%;
     text-align: center;
     display: flex;
@@ -40,13 +43,13 @@ body {
 
 .title-container > h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #e71f1f
 }
 
 .title-image {
-    width: 40px;
-    margin-right: 10px;
+    width: 30px;
+    margin-right: 3px;
 }
 
 .title-buttons {
@@ -60,7 +63,7 @@ body {
     border: none;
     background-color: #fff;
     margin-bottom: 0;
-    padding: 0 0.2em;
+    padding: 0 0.1em;
 }
 
 .title-info > .fa-solid {
@@ -72,8 +75,8 @@ body {
 /* TILES */
 
 .tile-container {
-    width: 400px;
-    margin-bottom: 20px;
+    width: 350px;
+    margin-bottom: 10px;
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -88,8 +91,8 @@ body {
 }
 
 .tile {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border: 1px solid #838383;
     box-sizing: border-box;
     display: flex;
@@ -109,6 +112,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    touch-action: manipulation;
 }
 
 .key-container button {
@@ -122,6 +126,7 @@ body {
     border: 1px solid #b1b1b1;
     margin: 2px;
     font-size: 0.75rem;
+    touch-action: manipulation;
 }
 
 .key-container button:active {
@@ -144,7 +149,7 @@ body {
 }
 
 .row-container3 button:first-child {
-    width: 45px;
+    width: 48px;
 }
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
@@ -168,7 +173,7 @@ body {
     background-color: #fff;;
     padding: 0 0 1.125em 0;
     max-width: 100%;
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
     position: relative;
     top: 12%;
@@ -470,7 +475,7 @@ other things - not defined yet!
     background-color: #fff;;
     padding: 0 0 1.125em 0;
     max-width: 100%;
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
     position: relative;
     top: 12%;
@@ -567,7 +572,7 @@ h3 {
     margin: 0.5em;
 }
 
-
+/* 
 @media (max-width: 500px) {
 
     body {
@@ -614,4 +619,4 @@ h3 {
         margin: 0.75em 1.25em 0 0 ;
     }
  
- }
+ } */

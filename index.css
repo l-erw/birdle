@@ -75,7 +75,12 @@ body {
     width: 400px;
     margin-bottom: 20px;
     max-width: 100%;
-    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .row {
@@ -83,21 +88,22 @@ body {
 }
 
 .tile {
-    width: 55px;
-    height: 55px;
-    border: 2px solid #838383;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #838383;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2px;
+    margin: 1px;
     border-radius: 5px;
+    background-color: #fff;
 }
 
 /* KEYBOARD */
 
 .key-container {
-    width: 450px;
+    width: 300px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -109,8 +115,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 45px;
+    width: 25px;
+    height: 35px;
     background-color: #ebebeb;
     border-radius: 5px;
     border: 1px solid #b1b1b1;
@@ -134,11 +140,11 @@ body {
 
 .row-container3  button:last-child {
     font-size: 1.1rem;
-    width: 52px;
+    width: 40px;
 }
 
 .row-container3 button:first-child {
-    width: 58px;
+    width: 45px;
 }
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
@@ -250,25 +256,29 @@ h3 {
     margin: 0.5em;
 }
 
+
 /* MESSAGE */
 
-.message-container,
-.slider-container {
+.message-container {
     height: 40px;
-    margin: 0.25em 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0.25em 0.25em 0 0.75em;
     width: 100%; 
 }
 
 .message {
     background-color: #0077ff;
     color: #fff;
-    margin: 0.25em 1.25em 0;
-    /* padding: 0.5em 0.75em; */
-
+    margin: 0;
 }
+
+.modal-body > p {
+    padding: 1em;
+    text-align: center;
+}
+
 
 /* TILE COLOURS AND ANIMATIONS */
 
@@ -350,9 +360,18 @@ h3 {
 
 
 /* SLIDER */
+
+.slider-container {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+}
+
 output {
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     padding-right: 0.25em;
 }
 
@@ -372,13 +391,13 @@ output {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 8px;
+    height: 5px;
     border-radius: 5px;
     background: #fff;
     -webkit-transition: .1s;
     transition: opacity .2s;
     margin: 0 0.5em;
-    box-shadow: -1px -1px 2px 0px #b2b2b2;
+    box-shadow: -1px -1px 2px 0px #8f8f8f;
 
 }
 
@@ -390,12 +409,12 @@ output {
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 16px; 
-    height: 16px; 
+    width: 12px; 
+    height: 12px; 
     border-radius: 50%;
     background: #fff;
     cursor: pointer; 
-    box-shadow: -1px -1px 2px 0px #b2b2b2;
+    box-shadow: -1px -1px 2px 0px #8f8f8f;
   }
   
   .slider::-moz-range-thumb {
@@ -546,31 +565,6 @@ a {
 
 h3 {
     margin: 0.5em;
-}
-
-/* MESSAGE */
-
-.message-container,
-.slider-container {
-    height: 40px;
-    margin: 0.25em 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; 
-}
-
-.message {
-    background-color: #0077ff;
-    color: #fff;
-    margin: 0.25em 1.25em 0;
-    /* padding: 0.5em 0.75em; */
-
-}
-
-.modal-body > p {
-    padding: 1em;
-    text-align: center;
 }
 
 

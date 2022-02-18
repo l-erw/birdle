@@ -1,7 +1,5 @@
 //TO DO
 // 1. link up dictionary API 
-// 4. Find image and info to include when Birdle is won
-// Find where to remove event listener / handle click function once game is over
 // Add a "not enough letters" notification if enter is pressed before 7 letters
 
 //add all birds into same array, and add letternumber key. 
@@ -325,7 +323,7 @@ let sliderValue
 let slider = document.getElementById("wordLength");
 let output = document.getElementById("rangevalue");
 
-
+//this creates the grid for word guesses
 function createGrid() {
     tileDisplay.innerHTML = ""
     for (let i = 0; i < rows; i++) {
@@ -350,7 +348,7 @@ function createGrid() {
 }
 
 createGrid()
-
+//this changes the size of the grid based on the value from the slider
 slider.oninput = function() {
     sliderValue = slider.value
     output.value = slider.value
@@ -358,7 +356,7 @@ slider.oninput = function() {
     createGrid()
 }
 
-
+// creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
 keysRow1.forEach(key => {
     const buttonElement = document.createElement("button")
     buttonElement.textContent = key
@@ -383,7 +381,7 @@ keysRow3.forEach(key => {
     keyboardRow3.append(buttonElement)
 })
 
-
+//this handles key events, unless game is over, and runs delete/check functions
 const handleClick = (key) => {
     if (!isGameOver){ 
         if (key === "«") {
@@ -398,6 +396,8 @@ const handleClick = (key) => {
         addLetter(key)}
 }
 
+//this adds new letters to the grid and checks for the whether a row is full
+//need to figure out how to get slider value into here to check tile number
 const addLetter = (letter) => {
     if (currentTile < 7 && currentRow < 6) {
         const tile = document.getElementById(`guessRow-${currentRow}-tile-${currentTile}`)
@@ -423,7 +423,7 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
-
+//need to get slider value into here as well 
     if (currentTile > 6) {
         flipTile()
         if (birdle === guess) {

@@ -312,7 +312,7 @@ let currentRow = 0
 let currentTile = 0
 let isGameOver = false
 const rows = 6
-let columns = 4
+let columns = 7
 let sliderValue 
 let slider = document.getElementById("wordLength");
 let output = document.getElementById("rangevalue");
@@ -415,7 +415,6 @@ const addLetter = (letter) => {
         currentTile++
         console.log("guessRows", guessRows )
     }
-
 }
 
 
@@ -426,10 +425,9 @@ const deleteLetter = () => {
         tile.textContent = ""
         guessRows[currentRow][currentTile] = ""
         tile.setAttribute("data", "")
-    }
-    
+    }   
 }
-//if columns < 7 then reduce timeout, 
+
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
     if (currentTile > (columns-1)) {
@@ -453,7 +451,7 @@ const checkRow = () => {
             if (currentRow >= 5) {
                 setTimeout(() => {
                     showMessage(`Here's the Birdle, better luck next time!`)
-                    }, 4000)
+                    }, timeLapsed)
                 displayBirdInfo()
                 isGameOver = true
                 return
@@ -530,3 +528,6 @@ function displayBirdInfo() {
 }
 
 
+fetch("https://api.dictionaryapi.dev/api/v2/entries/en/raven")
+.then(res => res.json())
+.then(data => console.log(data))

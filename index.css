@@ -455,6 +455,17 @@ output {
     background: #b1b1b1;
   }
 
+
+ .not-word {
+     display: none;
+     position: absolute;
+     top: 30%;
+     background-color: #666;
+     color: #fff;
+     padding: 0.5em 1em;
+     border-radius: 10px;
+     font-size: 0.9rem;
+ } 
 /* 
 @media (max-width: 500px) {
 

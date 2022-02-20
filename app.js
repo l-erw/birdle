@@ -419,15 +419,19 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
-    const notAWord = false
+    const notAWord = document.getElementById("not-a-word")
 
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${guess}`)
     .then(res => res.json())
     .then(data => {
         console.log(data)
         if (data.title === "No Definitions Found") {
-            console.log("Loser")
-            return
+            setTimeout(() => {
+                notAWord.style.display = "block"
+                console.log("Loser")}, 500
+            )
+            clearTimeout()
+
         } else if (currentTile > (columns-1)) {
             flipTile()
             if (birdle === guess) {
@@ -440,8 +444,6 @@ const checkRow = () => {
                 setTimeout(()=> {
                     hintsBtn.style.display = "none"
                     showMessage("Congratulations, you got the Birdle!")
-                    // getWordle()
-                    
                 }, timeLapsed)
                 displayBirdInfo()
                 isGameOver = true
@@ -461,10 +463,7 @@ const checkRow = () => {
             }
         }
         
-    })
-
-    
-    
+    })     
 }
 
 const showMessage = (message) => { 

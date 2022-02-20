@@ -4,11 +4,6 @@
 //fix insane spacing on the instructions modal
 //if slider changes value in the middle of the game, reset whole game, choose new Birdle, reset tiles and keyboard
 
-
-const tileDisplay = document.querySelector(".tile-container")
-const keyboardRow1 = document.querySelector(".row-container1")
-const keyboardRow2 = document.querySelector(".row-container2")
-const keyboardRow3 = document.querySelector(".row-container3")
 const messageDisplay = document.querySelector(".message-container")
 const infoDisplay = document.getElementById("info-overlay")
 const instructionsDisplay = document.getElementById("instructions-overlay")
@@ -40,6 +35,41 @@ const openInstructions = document.getElementById("instructions-modal").addEventL
 const closeInstructions = document.getElementById("close-instructions").addEventListener("click", function() {
     instructionsDisplay.style.display = "none"
 })
+
+// creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
+const createKeyboard = () => {   
+    const keysRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
+    const keysRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
+    const keysRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
+    
+    keysRow1.forEach(key => {
+        const keyboardRow1 = document.querySelector(".row-container1")
+        const buttonElement = document.createElement("button")
+        buttonElement.textContent = key
+        buttonElement.setAttribute('id', key)
+        buttonElement.addEventListener('click', () => handleClick(key))
+        keyboardRow1.append(buttonElement)
+    })
+
+    keysRow2.forEach(key => {
+        const keyboardRow2 = document.querySelector(".row-container2")
+        const buttonElement = document.createElement("button")
+        buttonElement.textContent = key
+        buttonElement.setAttribute('id', key)
+        buttonElement.addEventListener('click', () => handleClick(key))
+        keyboardRow2.append(buttonElement)
+    })
+
+    keysRow3.forEach(key => {
+        const keyboardRow3 = document.querySelector(".row-container3")
+        const buttonElement = document.createElement("button")
+        buttonElement.textContent = key
+        buttonElement.setAttribute('id', key)
+        buttonElement.addEventListener('click', () => handleClick(key))
+        keyboardRow3.append(buttonElement)
+    })
+}
+createKeyboard()
 
 //Bird info
 
@@ -286,15 +316,6 @@ const birds = [
 //         console.log(word)
 //     }) 
 // }
-
-
-// set up for keyboard
-
-const keysRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
-const keysRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
-const keysRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
-
-
 let guessRows = []
 let currentRow = 0
 let currentTile = 0
@@ -308,6 +329,7 @@ let output = document.getElementById("rangevalue");
 
 //this creates the grid for word guesses
 function createGrid() {
+    const tileDisplay = document.querySelector(".tile-container")
     tileDisplay.innerHTML = ""
     for (let i = 0; i < rows; i++) {
         guessRows[i] = [""]
@@ -327,6 +349,7 @@ function createGrid() {
             tileElement.classList.add("tile")
             rowElement.append(tileElement) 
         }) 
+        
         tileDisplay.append(rowElement)
     })      
 }
@@ -354,30 +377,8 @@ slider.oninput = function() {
     getBirdle()
 }
 
-// creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
-keysRow1.forEach(key => {
-    const buttonElement = document.createElement("button")
-    buttonElement.textContent = key
-    buttonElement.setAttribute('id', key)
-    buttonElement.addEventListener('click', () => handleClick(key))
-    keyboardRow1.append(buttonElement)
-})
 
-keysRow2.forEach(key => {
-    const buttonElement = document.createElement("button")
-    buttonElement.textContent = key
-    buttonElement.setAttribute('id', key)
-    buttonElement.addEventListener('click', () => handleClick(key))
-    keyboardRow2.append(buttonElement)
-})
 
-keysRow3.forEach(key => {
-    const buttonElement = document.createElement("button")
-    buttonElement.textContent = key
-    buttonElement.setAttribute('id', key)
-    buttonElement.addEventListener('click', () => handleClick(key))
-    keyboardRow3.append(buttonElement)
-})
 
 //this handles key events, unless game is over, and runs delete/check functions
 const handleClick = (key) => {
@@ -403,7 +404,7 @@ const addLetter = (letter) => {
         guessRows[currentRow][currentTile] = letter
         tile.setAttribute("data", letter)
         currentTile++
-        console.log("guessRows", guessRows )
+        console.log("guessRows", guessRows)
     }
 }
 
@@ -486,7 +487,7 @@ const flipTile = () => {
 
 
 //change to if/else if - should fix bug with 2 of same letter 
-//need to check green, then yellow then check again if there's more than 1 of the letter - letters checked haven't already been yellowed - if a word contains 1 E, then you only want the     
+//need to check green, then yellow then check again if there's more than 1 of the letter - letters checked haven't already been yellowed    
     guess.forEach((guess, index) => {
         if (guess.letter == birdle[index]) {
             guess.color = "green-overlay"

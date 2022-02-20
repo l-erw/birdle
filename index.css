@@ -72,6 +72,21 @@ body {
     margin: 0;
 }
 
+.red-btn {
+    border: none;
+    padding: 0.45em 0.5em;
+    margin: 0 0.5em 0 0.2em;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    background-color: #e71f1f;
+    color: #fff;
+    font-family: inherit;
+}
+
+.hint-btn {
+    margin-right: 1em;
+}
+
 /* TILES */
 
 .tile-container {
@@ -282,6 +297,12 @@ h3 {
     font-size: 0.95rem;
 }
 
+.credits-link {
+    font-size: 0.9rem;
+    margin: 0.25em 0;
+    text-decoration: none;
+}
+
 /* MESSAGE */
 
 .message-container {
@@ -336,7 +357,7 @@ h3 {
     border: none !important;
 }
 
-/* FOOTER - CREDITS */
+/* FOOTER  */
 
 .game-container-bottom {
     margin: 0 auto;
@@ -346,7 +367,7 @@ h3 {
 
 }
 
-.footer-buttons {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,20 +375,6 @@ h3 {
     margin: 0 auto;
 }
 
-.red-btn {
-    border: none;
-    padding: 0.45em 0.5em;
-    margin: 0 0.5em 0 0.2em;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    background-color: #e71f1f;
-    color: #fff;
-    font-family: inherit;
-}
-
-.hint-btn {
-    margin-right: 1em;
-}
 
 .footer-link {
     text-decoration: none;
@@ -375,7 +382,7 @@ h3 {
     background-color: #13D1BE;
     padding: 0.65em 1.125em;
     border-radius: 10px;
-    
+    margin-top: 0.5em;  
 }
 
 
@@ -443,24 +450,6 @@ output {
     background: #fff; 
     cursor: pointer;
   }
-
-/* 
-
-HOW TO PLAY
-button (color?) 
-game example images
-body text - size/spacing, etc. 
-
-BIRD INFO
-body text
-link
-
-CREDITS
-links
-button (color?)
-
-STATS (TBC)
-other things - not defined yet! 
 
 
 /* 

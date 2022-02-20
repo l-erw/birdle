@@ -154,12 +154,10 @@ body {
 
 /* MODALS FOR BIRD INFO AND INSTRUCTIONS */
 
-.modal-container,
-.instructions-container,
-.credits-container {
+.modal--overlay-container {
     display: none;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -168,10 +166,9 @@ body {
     background-color: rgba(219, 218, 218, 0.3);
 }
 
-.modal,
-.instructions {
+.modal--card {
     background-color: #fff;;
-    padding: 0 0 1.125em 0;
+    padding: 0 0 1.25em 0;
     max-width: 100%;
     width: 350px;
     margin: 0 auto;
@@ -180,14 +177,16 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-  }
+}
 
-.modal-top {
+.modal--card-top {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+} 
+
+.modal--bird-info-top {
     background-color: #0077ff;
     border-radius: 10px 10px 0 0;
 }
@@ -201,66 +200,87 @@ body {
     margin-top: 0.5em;
 }
 
-h2 {
+.modal--bird-info-heading {
     margin: 0 0 0.25em;
-    color: #e71f1f;
-    text-transform: uppercase;
+}
+
+.modal--heading {
+    margin: 0.75em;
 }   
 
-.fa-circle-xmark {
+.modal--bird-info-heading,
+.modal--heading {
+    color: #e71f1f;
+    text-transform: uppercase;
+}
+
+.modal--close {
+    align-self: flex-start;
+    border: none;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 0.75em 0.85em 0 0 ;
+}
+
+.modal--close-bird-info {
+    background-color: #0077ff;
+}
+
+.modal--close-white {
     font-size: 1.125rem;
     color: #fff;
 }
 
-.bird-image {
-      width: 90%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      align-self: center;
-      /* margin-bottom: 1em; */
-  }
-
-.close-modal {
-    align-self: flex-start;
-    border: none;
-    background-color: #0077ff;
-    width: 25px;
-    height: 25px;
-    margin: 0.75em 0.75em 0 0 ;
-
+.modal--close-red {
+    font-size: 1.125rem;
+    color: #e71f1f;
 }
-  
-a {
+
+.bird-image {
+    width: 90%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.bird-link {
     font-size: 0.65rem;
     margin-top: 0.5em;
 }
 
-.info-body {
-  
-    padding: 0 0.25em;
+.modal-body-text {
+    font-size: 0.85rem;
     line-height: 1.5;
-    font-size: 0.95rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 1em;
+    
 }
+
+.info-body {
+    margin: 0.75em 0.25em;
+    padding: 0 1.5em;
+}
+
 
 .how-to-body {
     font-weight: 300;
-    margin: 0.25em 0.25em;
-    padding: 0 1.5em;
-    line-height: 1.5;
-    font-size: 0.95rem;
+    margin: 0.25em;
+
 }
 
 .example-image {
     max-width: 50%;
-    padding: 0.25em 1em;
-    margin: 0.5em 0;
+    padding: 0.25em 0.75em;
+    margin: 0.25em 0;
 }
 
 h3 {
-    margin: 0.5em;
+    margin: 0.25em 0 0 ;
+    font-size: 0.95rem;
 }
-
 
 /* MESSAGE */
 
@@ -279,12 +299,6 @@ h3 {
     font-size: 0.85rem;
     margin: 0;
 }
-
-.modal-body > p {
-    padding: 1em;
-    text-align: center;
-}
-
 
 /* TILE COLOURS AND ANIMATIONS */
 
@@ -431,13 +445,6 @@ output {
   }
 
 /* 
-GENERIC CLASSES
-generic overlay /
-generic card for modal /
-generic modal top /
-generic modal body 
-generic heading /
-generic close modal button /
 
 HOW TO PLAY
 button (color?) 
@@ -445,9 +452,6 @@ game example images
 body text - size/spacing, etc. 
 
 BIRD INFO
-message container
-message
-button (color?)
 body text
 link
 
@@ -458,120 +462,6 @@ button (color?)
 STATS (TBC)
 other things - not defined yet! 
 
-/* MODALS FOR BIRD INFO AND INSTRUCTIONS */
-
-.modal--overlay-container {
-    display: none;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(219, 218, 218, 0.3);
-}
-
-.modal--card {
-    background-color: #fff;;
-    padding: 0 0 1.125em 0;
-    max-width: 100%;
-    width: 350px;
-    margin: 0 auto;
-    position: relative;
-    top: 12%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-  
-.modal--card-top {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-} 
-
-.modal--bird-info-top {
-    background-color: #0077ff;
-    border-radius: 10px 10px 0 0;
-}
-
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.95rem;
-    margin-top: 0.5em;
-}
-
-.modal--bird-info-heading {
-    margin: 0 0 0.25em;
-    color: #e71f1f;
-    text-transform: uppercase;
-}
-
-.modal--heading {
-    margin: 0.75em;
-    color: #e71f1f;
-    text-transform: uppercase;
-}   
-
-.modal--close {
-    align-self: flex-start;
-    border: none;
-    background-color: #fff;
-    width: 25px;
-    height: 25px;
-    margin: 0.75em 0.75em 0 0 ;
-}
-
-.modal--close-bird-info {
-    background-color: #0077ff;
-}
-
-.modal--close-white {
-    font-size: 1.125rem;
-    color: #fff;
-}
-
-.modal--close-red {
-    font-size: 1.125rem;
-    color: #e71f1f;
-}
-
-.bird-image {
-      width: 90%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      align-self: center;
-      /* margin-bottom: 1em; */
-  }
-  
-a {
-    font-size: 0.65rem;
-    margin-top: 0.5em;
-}
-
-.info-body {
-    margin: 0.75em 0.25em;
-    padding: 0 1.5em;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    font-weight: 300;
-}
-
-.example-image {
-    max-width: 50%;
-    padding: 0.25em 1em;
-    margin: 0.5em 0;
-}
-
-h3 {
-    margin: 0.5em;
-}
 
 /* 
 @media (max-width: 500px) {

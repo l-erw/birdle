@@ -1,7 +1,6 @@
 //TO DO
 // 1. link up dictionary API 
 // Add a "not enough letters" notification if enter is pressed before 7 letters
-//Add function to decide size of grid based on slider position, and then look for values in array that have matching letternumber to the slider value. 
 //fix insane spacing on the instructions modal
 //if slider changes value in the middle of the game, reset whole game, choose new Birdle, reset tiles and keyboard
 
@@ -281,17 +280,6 @@ const birds = [
 
 
 // const getWordle = () => {
-//     fetch("http://localhost.8000/word")
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data)
-//         wordle = data.toUpperCase()
-//     })
-// }
-
-// getWordle()
-
-// const getWordle = () => {
 //     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordle}`)
 //     .then(response => response.json())
 //     .then(word => {
@@ -324,7 +312,7 @@ function createGrid() {
     for (let i = 0; i < rows; i++) {
         guessRows[i] = [""]
         for (let j = 0; j < columns; j++) {
-        guessRows[i][j] = ""
+            guessRows[i][j] = ""
         }
     }
 
@@ -332,12 +320,13 @@ function createGrid() {
         const rowElement = document.createElement("div")
         rowElement.setAttribute("id", "guessRow-" + guessRowIndex)
         rowElement.classList.add("row")
+        
         guessRow.forEach((_guess, guessIndex) => {
             const tileElement = document.createElement("div")
             tileElement.setAttribute("id", "guessRow-" + guessRowIndex + "-tile-" + guessIndex)
             tileElement.classList.add("tile")
             rowElement.append(tileElement) 
-        })
+        }) 
         tileDisplay.append(rowElement)
     })      
 }
@@ -360,9 +349,9 @@ slider.oninput = function() {
     //clear keyboard and current board, set new birdle
     sliderValue = slider.value
     output.value = slider.value
-    columns = sliderValue
+    columns = parseInt(sliderValue)
     createGrid()
-    //get birdle
+    getBirdle()
 }
 
 // creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
@@ -402,7 +391,8 @@ const handleClick = (key) => {
             checkRow()
             return
         } 
-        addLetter(key)}
+        addLetter(key)
+    }
 }
 
 //this adds new letters to the grid and checks for the whether a row is full
@@ -430,6 +420,13 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
+
+// ADD IN CHECK IF WORD IS A WORD: 
+// fetch("https://api.dictionaryapi.dev/api/v2/entries/en/raven")
+// .then(res => res.json())
+// .then(data => console.log(data))
+
+
     if (currentTile > (columns-1)) {
         flipTile()
         if (birdle === guess) {
@@ -487,6 +484,9 @@ const flipTile = () => {
         guess.push({letter: tile.getAttribute("data"), color: "grey-overlay"})
     })
 
+
+//change to if/else if - should fix bug with 2 of same letter 
+//need to check green, then yellow then check again if there's more than 1 of the letter - letters checked haven't already been yellowed - if a word contains 1 E, then you only want the     
     guess.forEach((guess, index) => {
         if (guess.letter == birdle[index]) {
             guess.color = "green-overlay"
@@ -518,16 +518,12 @@ function displayBirdInfo() {
     birdInfoBody.innerHTML = `
         <h2 class="modal--bird-info-heading" id="bird-info-heading">${randomBirdle.name}</h2>
         <img class="bird-image" src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
-        <a href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
+        <a class="bird-link" href=${randomBirdle.imageAuthorUrl}>${randomBirdle.imageAuthor}</a>
 
-        <p class="info-body">
+        <p class="info-body modal-body-text">
         ${randomBirdle.birdFacts}
         </p>  
 
-        <a href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/${randomBirdle.birdFactsUrl}" target="_blank">Find more information on the ${randomBirdle.name} on the RSPB</a>`
+        <a class="bird-link" href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/${randomBirdle.birdFactsUrl}" target="_blank">Find more information on the ${randomBirdle.name} on the RSPB</a>`
 }
 
-
-fetch("https://api.dictionaryapi.dev/api/v2/entries/en/raven")
-.then(res => res.json())
-.then(data => console.log(data))

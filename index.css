@@ -451,6 +451,9 @@ output {
     cursor: pointer;
   }
 
+  .slider-disabled {
+    background: #b1b1b1;
+  }
 
 /* 
 @media (max-width: 500px) {

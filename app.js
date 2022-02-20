@@ -1,7 +1,6 @@
 //TO DO
 // 1. link up dictionary API 
 // Add a "not enough letters" notification if enter is pressed before 7 letters
-//fix insane spacing on the instructions modal
 //if slider changes value in the middle of the game, reset whole game, choose new Birdle, reset tiles and keyboard
 
 const messageDisplay = document.querySelector(".message-container")
@@ -9,6 +8,15 @@ const infoDisplay = document.getElementById("info-overlay")
 const instructionsDisplay = document.getElementById("instructions-overlay")
 const creditsDisplay = document.getElementById("credits-overlay")
 const hintsBtn = document.getElementById("hint-modal")
+let guessRows = []
+let currentRow = 0
+let currentTile = 0
+let isGameOver = false
+const rows = 6
+let columns = 7
+let sliderValue 
+const slider = document.getElementById("wordLength");
+const output = document.getElementById("rangevalue");
 
 // Open/close modals in title bar
 const openCredits = document.getElementById("credits-modal").addEventListener("click", function() {
@@ -27,7 +35,6 @@ const openModal = document.getElementById("open-modal").addEventListener("click"
     infoDisplay.style.display = "block"
 } )
 
-
 const openInstructions = document.getElementById("instructions-modal").addEventListener("click", function() {
     instructionsDisplay.style.display = "block"
 } )
@@ -37,14 +44,16 @@ const closeInstructions = document.getElementById("close-instructions").addEvent
 })
 
 // creates each row of the keyboard -- needs to be changed so it works with a keyboard on a computer
-const createKeyboard = () => {   
+const createKeyboard = () => {  
     const keysRow1 = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"]
     const keysRow2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"]
     const keysRow3 = ["ENTER", "Z", "X", "C", "V", "B", "N", "M", "«"]
     
     keysRow1.forEach(key => {
         const keyboardRow1 = document.querySelector(".row-container1")
+        console.log(keyboardRow1)
         const buttonElement = document.createElement("button")
+        buttonElement.classList.add("test")
         buttonElement.textContent = key
         buttonElement.setAttribute('id', key)
         buttonElement.addEventListener('click', () => handleClick(key))
@@ -54,6 +63,7 @@ const createKeyboard = () => {
     keysRow2.forEach(key => {
         const keyboardRow2 = document.querySelector(".row-container2")
         const buttonElement = document.createElement("button")
+        buttonElement.classList.add("test")
         buttonElement.textContent = key
         buttonElement.setAttribute('id', key)
         buttonElement.addEventListener('click', () => handleClick(key))
@@ -63,6 +73,7 @@ const createKeyboard = () => {
     keysRow3.forEach(key => {
         const keyboardRow3 = document.querySelector(".row-container3")
         const buttonElement = document.createElement("button")
+        buttonElement.classList.add("test")
         buttonElement.textContent = key
         buttonElement.setAttribute('id', key)
         buttonElement.addEventListener('click', () => handleClick(key))
@@ -70,6 +81,7 @@ const createKeyboard = () => {
     })
 }
 createKeyboard()
+
 
 //Bird info
 
@@ -305,26 +317,7 @@ const birds = [
 
 ]
 
-//selects a random bird from the birds array (based on word length)
-// let randomBirdle = birds[Math.floor(Math.random() * birds.length)]
 
-
-// const getWordle = () => {
-//     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordle}`)
-//     .then(response => response.json())
-//     .then(word => {
-//         console.log(word)
-//     }) 
-// }
-let guessRows = []
-let currentRow = 0
-let currentTile = 0
-let isGameOver = false
-const rows = 6
-let columns = 7
-let sliderValue 
-let slider = document.getElementById("wordLength");
-let output = document.getElementById("rangevalue");
 
 
 //this creates the grid for word guesses
@@ -356,6 +349,8 @@ function createGrid() {
 
 createGrid()
 
+
+//selects a random bird from the birds array (based on word length)
 function getBirdle() {
     let birdWordLength = birds.filter(bird => bird.letterNumber === columns)
     console.log(birdWordLength)
@@ -367,21 +362,11 @@ function getBirdle() {
 
 getBirdle()
 
-//this changes the size of the grid based on the value from the slider
-slider.oninput = function() {
-    //clear keyboard and current board, set new birdle
-    sliderValue = slider.value
-    output.value = slider.value
-    columns = parseInt(sliderValue)
-    createGrid()
-    getBirdle()
-}
-
-
-
 
 //this handles key events, unless game is over, and runs delete/check functions
 const handleClick = (key) => {
+    slider.disabled = true;
+    slider.classList.add("slider-disabled")
     if (!isGameOver){ 
         if (key === "«") {
             deleteLetter()
@@ -408,7 +393,6 @@ const addLetter = (letter) => {
     }
 }
 
-
 const deleteLetter = () => {
     if (currentTile > 0) {
         currentTile--
@@ -419,47 +403,68 @@ const deleteLetter = () => {
     }   
 }
 
+// const checkBirdle = (guess) => {
+//     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${guess}`)
+//     .then(res => res.json())
+//     .then(data => console.log(data))
+
+//     if (data.title === "No Definitions Found") {
+//         console.log("not a word")
+//     } else if (data.title === guess) {
+//         console.log("is a word")
+//     }
+
+// }
+
+
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
+    const notAWord = false
 
-// ADD IN CHECK IF WORD IS A WORD: 
-// fetch("https://api.dictionaryapi.dev/api/v2/entries/en/raven")
-// .then(res => res.json())
-// .then(data => console.log(data))
-
-
-    if (currentTile > (columns-1)) {
-        flipTile()
-        if (birdle === guess) {
-            if (columns >= 9) {
-                timeLapsed = 5000
-            } else if (columns > 6) {
-                timeLapsed = 4000
-            } else {
-                timeLapsed = 3000 } 
-            setTimeout(()=> {
-                hintsBtn.style.display = "none"
-                showMessage("Congratulations, you got the Birdle!")
-                // getWordle()
-                
-            }, timeLapsed)
-            displayBirdInfo()
-            isGameOver = true
-        } else {
-            if (currentRow >= 5) {
-                setTimeout(() => {
-                    showMessage(`Here's the Birdle, better luck next time!`)
-                    }, timeLapsed)
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${guess}`)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        if (data.title === "No Definitions Found") {
+            console.log("Loser")
+            return
+        } else if (currentTile > (columns-1)) {
+            flipTile()
+            if (birdle === guess) {
+                if (columns >= 9) {
+                    timeLapsed = 5000
+                } else if (columns > 6) {
+                    timeLapsed = 4000
+                } else {
+                    timeLapsed = 3000 } 
+                setTimeout(()=> {
+                    hintsBtn.style.display = "none"
+                    showMessage("Congratulations, you got the Birdle!")
+                    // getWordle()
+                    
+                }, timeLapsed)
                 displayBirdInfo()
                 isGameOver = true
-                return
-            }
-            if (currentRow < 5) {
-                currentRow++
-                currentTile = 0
+            } else {
+                if (currentRow >= 5) {
+                    setTimeout(() => {
+                        showMessage(`Here's the Birdle, better luck next time!`)
+                        }, timeLapsed)
+                    displayBirdInfo()
+                    isGameOver = true
+                    return
+                }
+                if (currentRow < 5) {
+                    currentRow++
+                    currentTile = 0
+                }
             }
         }
-    }
+        
+    })
+
+    
+    
 }
 
 const showMessage = (message) => { 
@@ -468,19 +473,21 @@ const showMessage = (message) => {
     messageElement.classList.add("message")
     messageDisplay.append(messageElement)
     setTimeout (infoDisplay.style.display="block", 4000)
-    
 }
+
 
 const addColorToKey = (keyLetter, color) => {
     const key = document.getElementById(keyLetter)
     key.classList.add(color)
 }
 
+
+//turns tiles over, checks guess against birdle and changes tile and key colours accordingly
 const flipTile = () => {
     const rowTiles = document.querySelector(`#guessRow-${currentRow}`).childNodes
-    let checkWordle = birdle
+    let checkBirdle = birdle
     const guess = []
-    
+
     rowTiles.forEach(tile => {
         guess.push({letter: tile.getAttribute("data"), color: "grey-overlay"})
     })
@@ -491,14 +498,15 @@ const flipTile = () => {
     guess.forEach((guess, index) => {
         if (guess.letter == birdle[index]) {
             guess.color = "green-overlay"
-            checkWordle = checkWordle.replace(guess.letter, "")
+            checkBirdle = checkBirdle.replace(guess.letter, "")
+            console.log(checkBirdle)
         }
     })
 
     guess.forEach(guess => {
-        if (checkWordle.includes(guess.letter)) {
+        if (checkBirdle.includes(guess.letter)) {
             guess.color = "yellow-overlay"
-            checkWordle = checkWordle.replace(guess.letter, "")
+            checkBirdle = checkBirdle.replace(guess.letter, "")
         }
     })
 
@@ -511,11 +519,23 @@ const flipTile = () => {
         })
 }
 
+
+//this changes the size of the grid based on the value from the slider
+slider.oninput = () => {
+    currentRow = 0
+    currentTile = 0
+    sliderValue = slider.value
+    output.value = slider.value
+    columns = parseInt(sliderValue)
+    createGrid()
+    getBirdle()
+}
+
 //DISPLAYING THE BIRD INFORMATION AT THE END//
 
-let birdInfoBody = document.getElementById("bird-info-body")
-
 function displayBirdInfo() {
+    const birdInfoBody = document.getElementById("bird-info-body")
+
     birdInfoBody.innerHTML = `
         <h2 class="modal--bird-info-heading" id="bird-info-heading">${randomBirdle.name}</h2>
         <img class="bird-image" src=${randomBirdle.imageUrl} alt="${randomBirdle.imageAltText}">
@@ -527,4 +547,5 @@ function displayBirdInfo() {
 
         <a class="bird-link" href="https://www.rspb.org.uk/birds-and-wildlife/wildlife-guides/bird-a-z/${randomBirdle.birdFactsUrl}" target="_blank">Find more information on the ${randomBirdle.name} on the RSPB</a>`
 }
+
 

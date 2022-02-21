@@ -1,7 +1,5 @@
 //TO DO
-// 1. link up dictionary API 
 // Add a "not enough letters" notification if enter is pressed before 7 letters
-//if slider changes value in the middle of the game, reset whole game, choose new Birdle, reset tiles and keyboard
 
 const messageDisplay = document.querySelector(".message-container")
 const infoDisplay = document.getElementById("info-overlay")
@@ -86,6 +84,18 @@ createKeyboard()
 //Bird info
 
 const birds = [
+    // {
+    //     id: ,
+    //     letterNumber: ,
+    //     birdleName: "",
+    //     name: "",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
     {
         id: 1,
         letterNumber: 4,
@@ -146,6 +156,394 @@ const birds = [
         birdFacts: "The goldfinch is a highly coloured finch with a bright red face and yellow wing patch. Sociable, often breeding in loose colonies, they have a delightful liquid twittering song and call. Their long fine beaks allow them to extract otherwise inaccessible seeds from thistles and teasels. Increasingly they are visiting bird tables and feeders. In winter many UK goldfinches migrate as far south as Spain. Goldfinches can be seen anywhere there are scattered bushes and trees, rough ground with thistles and other seeding plants.",
         birdFactsUrl: "goldfinch/"
     },
+    {
+        id: 10,
+        letterNumber: 9,
+        birdleName: "BLACKBIRD",
+        name: "blackbird",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: "blackbird/"
+    },
+    // {
+    //     id: ,
+    //     letterNumber: 8,
+    //     birdleName: "",
+    //     name: "blackcap",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "brambling",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "bullfinch",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 4,
+    //     birdleName: "",
+    //     name: "crow",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: "carrion-crow/"
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "chaffinch",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 10,
+    //     birdleName: "",
+    //     name: "chiffchaff",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 4,
+    //     birdleName: "",
+    //     name: "gull",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "sandpiper",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 4,
+    //     birdleName: "",
+    //     name: "tern",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 4,
+    //     birdleName: "",
+    //     name: "coot",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "cormorant",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 6,
+    //     birdleName: "",
+    //     name: "curlew",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 6,
+    //     birdleName: "",
+    //     name: "gannet",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 8,
+    //     birdleName: "",
+    //     name: "great tit",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 5,
+    //     birdleName: "",
+    //     name: "heron",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 10,
+    //     birdleName: "",
+    //     name: "greenfinch",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 7,
+    //     birdleName: "",
+    //     name: "jackdaw",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "little owl",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 6,
+    //     birdleName: "",
+    //     name: "magpie",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 6,
+    //     birdleName: "",
+    //     name: "osprey",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 8,
+    //     birdleName: "",
+    //     name: "nuthatch",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 9,
+    //     birdleName: "",
+    //     name: "peregrine",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 6,
+    //     birdleName: "",
+    //     name: "puffin",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 5,
+    //     birdleName: "",
+    //     name: "quail",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 5,
+    //     birdleName: "",
+    //     name: "robin",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 4,
+    //     birdleName: "",
+    //     name: "rook",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 10,
+    //     birdleName: "",
+    //     name: "song thrush",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },// {
+    //     id: ,
+    //     letterNumber: 8,
+    //     birdleName: "",
+    //     name: "starling",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 5,
+    //     birdleName: "",
+    //     name: "swift",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 8,
+    //     birdleName: "",
+    //     name: "tawny owl",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 10,
+    //     birdleName: "",
+    //     name: "turtle dove",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 10,
+    //     birdleName: "",
+    //     name: "woodpigeon",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+    // {
+    //     id: ,
+    //     letterNumber: 4,
+    //     birdleName: "",
+    //     name: "wren",
+    //     imageUrl: "",
+    //     imageAltText: "",
+    //     imageAuthor: "",
+    //     imageAuthorUrl: "",
+    //     birdFacts: "",
+    //     birdFactsUrl: ""
+    // },
+
     {
         id: 10,
         letterNumber: 10,
@@ -400,7 +798,8 @@ const deleteLetter = () => {
         tile.textContent = ""
         guessRows[currentRow][currentTile] = ""
         tile.setAttribute("data", "")
-    }   
+    } 
+    // if current row is 0 and tile is 0 then slider.disabled = false;  
 }
 
 // const checkBirdle = (guess) => {
@@ -424,46 +823,46 @@ const checkRow = () => {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${guess}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
-        if (data.title === "No Definitions Found") {
-            setTimeout(() => {
+            if (data.title === "No Definitions Found") {
                 notAWord.style.display = "block"
-                console.log("Loser")}, 500
-            )
-            clearTimeout()
+                setTimeout(() => {
+                    notAWord.style.display = "none"
+                    }, 2000
+                )
+                clearTimeout()
 
-        } else if (currentTile > (columns-1)) {
-            flipTile()
-            if (birdle === guess) {
-                if (columns >= 9) {
-                    timeLapsed = 5000
-                } else if (columns > 6) {
-                    timeLapsed = 4000
-                } else {
-                    timeLapsed = 3000 } 
-                setTimeout(()=> {
-                    hintsBtn.style.display = "none"
-                    showMessage("Congratulations, you got the Birdle!")
-                }, timeLapsed)
-                displayBirdInfo()
-                isGameOver = true
-            } else {
-                if (currentRow >= 5) {
-                    setTimeout(() => {
-                        showMessage(`Here's the Birdle, better luck next time!`)
-                        }, timeLapsed)
+            } else if (currentTile > (columns-1)) {
+                flipTile()
+                if (birdle === guess) {
+                    if (columns >= 9) {
+                        timeLapsed = 5000
+                    } else if (columns > 6) {
+                        timeLapsed = 4000
+                    } else {
+                        timeLapsed = 3000 } 
+                    setTimeout(()=> {
+                        hintsBtn.style.display = "none"
+                        showMessage("Congratulations, you got the Birdle!")
+                    }, timeLapsed)
                     displayBirdInfo()
                     isGameOver = true
-                    return
-                }
-                if (currentRow < 5) {
-                    currentRow++
-                    currentTile = 0
+                } else {
+                    if (currentRow >= 5) {
+                        setTimeout(() => {
+                            showMessage(`Here's the Birdle, better luck next time!`)
+                            }, timeLapsed)
+                        displayBirdInfo()
+                        isGameOver = true
+                        return
+                    }
+                    if (currentRow < 5) {
+                        currentRow++
+                        currentTile = 0
+                    }
                 }
             }
-        }
+    })
         
-    })     
 }
 
 const showMessage = (message) => { 

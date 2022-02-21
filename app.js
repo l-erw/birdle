@@ -237,12 +237,12 @@ const birds = [
         letterNumber: 5,
         birdleName: "SWIFT",
         name: "swift",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2020/06/01/22/15/swift-5248648_1280.jpg",
+        imageAltText: "a swift flying, bright blue sky",
+        imageAuthor: "TheOtherKev",
+        imageAuthorUrl: "https://pixabay.com/photos/swift-european-swift-black-bird-5248648/",
+        birdFacts: "Swifts are dark, sooty brown all over, but often look black against the sky. If you get a good look, you might see their pale throat. The wings are long and narrow, with a tail that is slightly forked, but not as much as a swallow's. Swifts have a piercing, screaming call, but they aren't noisy at the nest. Swifts nest in holes - often inside old buildings or sometimes in specially-designed swift nestboxes. You'll see swifts flying low and fast around buildings, screaming loudly, or perhaps swooping fast into a little crevice in a building to their nests. You won't see them perching on telegraph wires or fences; they have tiny feet and legs and can hardly walk!",
+        birdFactsUrl: "swift/"
     },
 
 // 6 LETTERS
@@ -263,60 +263,60 @@ const birds = [
         letterNumber: 6,
         birdleName: "CURLEW",
         name: "curlew",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://images.unsplash.com/photo-1616273694979-7ef012782d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80",
+        imageAltText: "a curlew standing on a sandy bank with algae",
+        imageAuthor: "Bob Brewer on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/i3UQSxJQyiI",
+        birdFacts: "The curlew is the largest European wading bird, instantly recognisable on winter estuaries or summer moors by its long, downcurved bill, brown upperparts, long legs and evocative call. The curlew can be seen around the whole UK coastline with the largest concentrations of found at Morecambe Bay, the Solway Firth, the Wash, and the Dee, Severn, Humber and Thames estuaries. Greatest breeding numbers are found in N Wales, the Pennines, the southern uplands and E Highlands of Scotland and the Northern Isles.",
+        birdFactsUrl: "curlew/"
     },
     {
         id: 63,
         letterNumber: 6,
         birdleName: "GANNET",
         name: "gannet",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://images.unsplash.com/photo-1603545052641-b4d994b7f09e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+        imageAltText: "a gannet sitting on a rocky cliff edge over the sea",
+        imageAuthor: "Carrie O'Leary",
+        imageAuthorUrl: "https://unsplash.com/photos/Sa8fuuzBRao",
+        birdFacts: "Adult gannets are large and bright white with black wingtips. They are distinctively shaped with a long neck and long pointed beak, long pointed tail, and long pointed wings. At sea they flap and then glide low over the water, often travelling in small groups. They feed by flying high and circling before plunging into the sea. They breed in significant numbers at only a few localities and so is an Amber List species. They can be seen offshore almost anywhere, especially when they migrate south between August and September.",
+        birdFactsUrl: "gannet/"
     },
     {
         id: 64,
         letterNumber: 6,
         birdleName: "MAGPIE",
         name: "magpie",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2022/02/17/07/26/bird-7018105_1280.jpg",
+        imageAltText: "a magpie standing on a wooden post with bird seed on it",
+        imageAuthor: "Georg_Wietschorke",
+        imageAuthorUrl: "https://pixabay.com/photos/bird-magpie-ornithology-species-7018105/",
+        birdFacts: "With its noisy chattering, black-and-white plumage and long tail, there is nothing else quite like the magpie in the UK. When seen close-up its black plumage takes on an altogether more colourful hue with a purplish-blue iridescent sheen to the wing feathers and a green gloss to the tail. Magpies seem to be jacks of all trades - scavengers, predators and pest-destroyers, their challenging, almost arrogant attitude has won them few friends. Non-breeding birds will gather together in flocks.",
+        birdFactsUrl: "magpie/"
     }, 
     {
         id: 65,
         letterNumber: 6,
         birdleName: "OSPREY",
         name: "osprey",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2021/10/03/07/00/bird-6677140_1280.jpg",
+        imageAltText: "an osprey flying in clear blue sky",
+        imageAuthor: "Johnnys_pic",
+        imageAuthorUrl: "https://pixabay.com/photos/bird-osprey-ornithology-species-6677140/",
+        birdFacts: "Seen in flight from below the osprey has white or slightly mottled underparts. The long wings are angled, bending at the 'wrist' which has a black patch contrasting with the white wing linings and at a distance it could be mistaken for a large gull. This spectacular fish-eating bird of prey is an Amber List species because of its historical decline (due to illegal killing) and low breeding numbers. They are listed as a Schedule 1 species on The Wildlife and Countryside Act.",
+        birdFactsUrl: "osprey/"
     }, 
     {
         id: 66,
         letterNumber: 6,
         birdleName: "PUFFIN",
         name: "puffin",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://images.unsplash.com/photo-1630016537018-d46c0ad5c6bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a puffin standing on long grass against a bright blue background",
+        imageAuthor: "Jonatan Pie on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/s_pW5jcElAM",
+        birdFacts: "Puffins are unmistakable birds with their black back and white underparts, distinctive black head with large pale cheeks and their tall, flattened, brightly-coloured bill. Its comical appearance is heightened by its red and black eye-markings and bright orange legs. Used as a symbol for books and other items, this clown among seabirds is one of the world's favourite birds. With half of the UK population at only a few sites it is an Red List species.",
+        birdFactsUrl: "puffin/"
     },    
     
     // 7 LETTERS 

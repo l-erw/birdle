@@ -99,7 +99,7 @@ const birds = [
 
 // 4 LETTERS
     {
-        id: 1,
+        id: 41,
         letterNumber: 4,
         birdleName: "SWAN",
         name: "swan",
@@ -111,81 +111,81 @@ const birds = [
         birdFactsUrl: "mute-swan/"
     },
     {
-        id: ,
+        id: 42,
         letterNumber: 4,
-        birdleName: "",
+        birdleName: "CROW",
         name: "crow",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
+        imageUrl: "https://cdn.pixabay.com/photo/2019/02/23/19/50/raven-4016367_1280.jpg",
+        imageAltText: "a crow standing on grass with autumn leaves",
+        imageAuthor: "Uschi_Du",
+        imageAuthorUrl: "https://pixabay.com/photos/crow-black-bird-animal-nature-4016367/",
+        birdFacts: "The all-black carrion crow is one of the cleverest, most adaptable of our birds. It is often quite fearless, although it can be wary of man. They are fairly solitary, usually found alone or in pairs, although they may form occasional flocks.The closely related hooded crow has recently been split as a separate species. Carrion crows will come to gardens for food and although often cautious initially, they soon learn when it is safe, and will return repeatedly to take advantage of whatever is on offer.",
         birdFactsUrl: "carrion-crow/"
     },
     {
-        id: ,
+        id: 43,
         letterNumber: 4,
-        birdleName: "",
+        birdleName: "GULL",
         name: "gull",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2017/02/18/02/02/seagull-2076355_1280.jpg",
+        imageAltText: "a gull standing on a wooden fence at the seaside",
+        imageAuthor: "diego_torres",
+        imageAuthorUrl: "https://pixabay.com/photos/seagull-ocean-coast-bird-dorset-2076355/",
+        birdFacts: "The common gull looks like a small, gentler version of the herring gull, with greenish legs and a yellow bill. Despite its name, it is not at all common in most inland areas, though it can be abundant on the coast and in some eastern counties. They are now seen more often in towns and on housing estates in winter.",
+        birdFactsUrl: "common-gull/"
     },
     {
-        id: ,
+        id: 44,
         letterNumber: 4,
-        birdleName: "",
+        birdleName: "TERN",
         name: "tern",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2021/04/14/14/21/tern-6178544_1280.jpg",
+        imageAltText: "a tern standing on a stone pillar with its beak open",
+        imageAuthor: "Georg_Wietschorke",
+        imageAuthorUrl: "https://pixabay.com/photos/tern-bird-animal-perched-wildlife-6178544/",
+        birdFacts: "These delightful silvery-grey and white birds have long tails which have earned them the nickname 'sea-swallow'. They have a buoyant, graceful flight and frequently hover over water before plunging down for a fish. They are often noisy in company and breed in colonies. The common tern is the tern species most likely to be found inland. The common tern breeds along coasts with shingle beaches and rocky islands, on rivers with shingle bars, and at inland gravel pits and reservoirs, feeding along rivers and over freshwater. Migrating birds can be seen offshore in autumn.",
+        birdFactsUrl: "common-tern/"
     }, 
     {
-        id: ,
+        id: 45,
         letterNumber: 4,
-        birdleName: "",
+        birdleName: "COOT",
         name: "coot",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2019/02/28/14/13/coot-4026019_1280.jpg",
+        imageAltText: "a coot walking across water that has frozen over",
+        imageAuthor: "MabelAmber",
+        imageAuthorUrl: "https://pixabay.com/photos/coot-water-bird-animal-walking-ice-4026019/",
+        birdFacts: "All-black and larger than its cousin, the moorhen, the Eurasian coot has a distinctive white beak and 'shield' above the beak which earns it the title 'bald'. Its feet have distinctive lobed flaps of skin on the toes which act in the same way as webbed feet when swimming. It patters noisily over the water before taking off and can be very aggressive towards others. Coot can be seen mainly on freshwater lakes, gravel pits, reservoirs, rivers and town park lakes when deep enough. Sometimes seen offshore, especially in winter if freshwater areas are frozen.",
+        birdFactsUrl: "coot/"
     }, 
     {
-        id: ,
+        id: 46,
         letterNumber: 4,
-        birdleName: "",
+        birdleName: "ROOK",
         name: "rook",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2020/04/30/17/36/bird-5113827_1280.jpg",
+        imageAltText: "a rook standing on a thin tree branch",
+        imageAuthor: "bluebudgie",
+        imageAuthorUrl: "https://pixabay.com/photos/bird-rook-beak-nature-crow-family-5113827/",
+        birdFacts: "Bare, greyish-white face, thinner beak and peaked head make it distinguishable from the carrion crow. Rooks are very sociable birds and you're not likely to see one on its own. They feed and roost in flocks in winter, often together with jackdaws.",
+        birdFactsUrl: "rook/"
     },
     {
-        id: ,
+        id: 47,
         letterNumber: 4,
-        birdleName: "",
+        birdleName: "WREN",
         name: "wren",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2021/02/10/13/20/wren-6002068_1280.jpg",
+        imageAltText: "a wren standing on the end of a grey branch",
+        imageAuthor: "DieNaturreise",
+        imageAuthorUrl: "https://pixabay.com/photos/wren-bird-wood-perched-animal-6002068/",
+        birdFacts: "The wren is a tiny brown bird, although it is heavier and not as slim as the even smaller goldcrest. It is dumpy, almost rounded, with a fine bill, quite long legs and toes, very short round wings and a short, narrow tail which is sometimes cocked up vertically. For such a small bird it has a remarkably loud voice. It is the most common UK breeding bird, although it suffers declines during prolonged, severely cold winters. Wrens can be found across the UK in a wide range of habitats - woodland, farmland, heathland, moorland and islands. They are a regular visitor to most gardens.",
+        birdFactsUrl: "wren/"
     },
 
 // 5 LETTERS 
     {
-        id: 2,
+        id: 51,
         letterNumber: 5,
         birdleName: "RAVEN",
         name: "raven",
@@ -197,45 +197,45 @@ const birds = [
         birdFactsUrl: "raven/"
     },
     {
-        id: ,
+        id: 52,
         letterNumber: 5,
-        birdleName: "",
+        birdleName: "HERON",
         name: "heron",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://images.unsplash.com/photo-1572986648308-88a49b13a081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a heron standing on a muddy bank next to water",
+        imageAuthor: "Santiago Lacarta on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/irmLHXKpT8Y",
+        birdFacts: "Grey herons are unmistakeable: tall, with long legs, a long beak and grey, black and white feathering. They can stand with their neck stretched out, looking for food, or hunched down with their neck bent over their chest. Grey herons can be seen around any kind of water - garden ponds, lakes, rivers and even on estuaries. Sometimes, grey herons circle high up into the sky and can be mistaken for large birds of prey.",
+        birdFactsUrl: "grey-heron"
     },
     {
-        id: ,
+        id: 53,
         letterNumber: 5,
-        birdleName: "",
+        birdleName: "QUAIL",
         name: "quail",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://cdn.pixabay.com/photo/2020/12/29/19/30/bird-5871357_1280.jpg",
+        imageAltText: "a quail standing on muddy ground with a green-yellow background",
+        imageAuthor: "terforeign",
+        imageAuthorUrl: "https://pixabay.com/photos/bird-quail-feathers-plumage-ave-5871357/",
+        birdFacts: "Quails are distinctive due to the combination of their stocky bodies and long, pointed wings. Their upperparts are brown, streaked and barred with buff, while their underparts are a warm buffy orange.Rarely seen, they are more often heard giving a distinctive “wet-my-lips” call. Their breeding range reaches as far north as the UK, where they are the only migrant species of the Phasianidae family. Due to their historical decline, quails are on the Amber List but are now in partial recovery. They are also listed on Schedule 1 of The Wildlife and Countryside Act 1981.",
+        birdFactsUrl: "quail/"
     }, 
     {
-        id: ,
+        id: 54,
         letterNumber: 5,
-        birdleName: "",
+        birdleName: "ROBIN",
         name: "robin",
-        imageUrl: "",
-        imageAltText: "",
-        imageAuthor: "",
-        imageAuthorUrl: "",
-        birdFacts: "",
-        birdFactsUrl: ""
+        imageUrl: "https://images.unsplash.com/photo-1619976302135-5efbc2a7785a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a robin perched on a branch with budding green leaves",
+        imageAuthor: "Alfred Kenneally on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/FH-DVrQoS4c",
+        birdFacts: "The UK's favourite bird - with its bright red breast it is familiar throughout the year and especially at Christmas! Males and females look identical, and young birds have no red breast and are spotted with golden brown. Robins sing nearly all year round and despite their cute appearance, they are aggressively territorial and are quick to drive away intruders. They will sing at night next to street lights. Robins live across the UK in woodland, hedgerows, parks and gardens.",
+        birdFactsUrl: "robin/"
     }, 
     {
-        id: ,
+        id: 55,
         letterNumber: 5,
-        birdleName: "",
+        birdleName: "SWIFT",
         name: "swift",
         imageUrl: "",
         imageAltText: "",
@@ -247,7 +247,7 @@ const birds = [
 
 // 6 LETTERS
     {
-        id: 6,
+        id: 61,
         letterNumber: 6,
         birdleName: "CUCKOO",
         name: "cuckoo",
@@ -259,9 +259,9 @@ const birds = [
         birdFactsUrl: "cuckoo/"
     },
     {
-        id: ,
+        id: 62,
         letterNumber: 6,
-        birdleName: "",
+        birdleName: "CURLEW",
         name: "curlew",
         imageUrl: "",
         imageAltText: "",
@@ -271,9 +271,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 63,
         letterNumber: 6,
-        birdleName: "",
+        birdleName: "GANNET",
         name: "gannet",
         imageUrl: "",
         imageAltText: "",
@@ -283,9 +283,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 64,
         letterNumber: 6,
-        birdleName: "",
+        birdleName: "MAGPIE",
         name: "magpie",
         imageUrl: "",
         imageAltText: "",
@@ -295,9 +295,9 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 65,
         letterNumber: 6,
-        birdleName: "",
+        birdleName: "OSPREY",
         name: "osprey",
         imageUrl: "",
         imageAltText: "",
@@ -307,9 +307,9 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 66,
         letterNumber: 6,
-        birdleName: "",
+        birdleName: "PUFFIN",
         name: "puffin",
         imageUrl: "",
         imageAltText: "",
@@ -321,7 +321,7 @@ const birds = [
     
     // 7 LETTERS 
     {
-        id: "1",
+        id: "71",
         letterNumber: 7,
         birdleName: "KESTREL",
         name: "kestrel",
@@ -333,7 +333,7 @@ const birds = [
         birdFactsUrl: "kestrel/"
     },
     {
-        id: "2",
+        id: "72",
         letterNumber: 7,
         birdleName: "SPARROW",
         name: "sparrow",
@@ -345,7 +345,7 @@ const birds = [
         birdFactsUrl: "house-sparrow/"
     },
     {
-        id: "3",
+        id: "73",
         letterNumber: 7,
         birdleName: "BLUETIT",
         name: "blue tit",
@@ -357,7 +357,7 @@ const birds = [
         birdFactsUrl: "blue-tit/"
     },
     {
-        id: "4",
+        id: "74",
         letterNumber: 7,
         birdleName:"BITTERN",
         name: "bittern",
@@ -369,7 +369,7 @@ const birds = [
         birdFactsUrl: "bittern/"
     },
     {
-        id: "5",
+        id: "75",
         letterNumber: 7,
         birdleName: "BUZZARD",
         name: "buzzard",
@@ -381,7 +381,7 @@ const birds = [
         birdFactsUrl: "buzzard/"
     },
     {
-        id: "6",
+        id: "76",
         letterNumber: 7,
         birdleName: "COALTIT",
         name: "Coal tit",
@@ -393,7 +393,7 @@ const birds = [
         birdFactsUrl: "coal-tit/"
     },
     {
-        id: "7",
+        id: "77",
         letterNumber: 7,
         birdleName: "GOSHAWK",
         name: "goshawk",
@@ -405,7 +405,7 @@ const birds = [
         birdFactsUrl: "goshawk/"
     },
     {
-        id: "8",
+        id: "78",
         letterNumber: 7,
         birdleName: "REDKITE",
         name: "red kite",
@@ -417,7 +417,7 @@ const birds = [
         birdFactsUrl: "red-kite/"
     },
     {
-        id: "9",
+        id: "79",
         letterNumber: 7,
         birdleName: "MOORHEN",
         name: "moorhen",
@@ -429,7 +429,7 @@ const birds = [
         birdFactsUrl: "moorhen/"
     },
     {
-        id: "10",
+        id: "710",
         letterNumber: 7,
         birdleName: "LAPWING",
         name: "lapwing",
@@ -441,7 +441,7 @@ const birds = [
         birdFactsUrl: "lapwing/"
     },
     {
-        id: "11",
+        id: "711",
         letterNumber: 7,
         birdleName: "BARNOWL",
         name: "barn owl",
@@ -453,7 +453,7 @@ const birds = [
         birdFactsUrl: "barn-owl/"
     },
     {
-        id: "12",
+        id: "712",
         letterNumber: 7,
         birdleName: "SKYLARK",
         name: "skylark",
@@ -465,7 +465,7 @@ const birds = [
         birdFactsUrl: "skylark/"
     },
     {
-        id: "13",
+        id: "713",
         letterNumber: 7,
         birdleName: "SWALLOW",
         name: "swallow",
@@ -477,9 +477,9 @@ const birds = [
         birdFactsUrl: "swallow/"
     }, 
     {
-        id: ,
+        id: 714,
         letterNumber: 7,
-        birdleName: "",
+        birdleName: "JACKDAW",
         name: "jackdaw",
         imageUrl: "",
         imageAltText: "",
@@ -491,9 +491,9 @@ const birds = [
 
 // 8 LETTERS
     {
-        id: ,
+        id: 81,
         letterNumber: 8,
-        birdleName: "",
+        birdleName: "NUTHATCH",
         name: "nuthatch",
         imageUrl: "",
         imageAltText: "",
@@ -503,9 +503,9 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 82,
         letterNumber: 8,
-        birdleName: "",
+        birdleName: "STARLING",
         name: "starling",
         imageUrl: "",
         imageAltText: "",
@@ -515,9 +515,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 83,
         letterNumber: 8,
-        birdleName: "",
+        birdleName: "TAWNYOWL",
         name: "tawny owl",
         imageUrl: "",
         imageAltText: "",
@@ -527,7 +527,7 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: 8,
+        id: 84,
         letterNumber: 8,
         birdleName: "PHEASANT",
         name: "pheasant",
@@ -539,9 +539,9 @@ const birds = [
         birdFactsUrl: "pheasant/"
     },
     {
-        id: ,
+        id: 85,
         letterNumber: 8,
-        birdleName: "",
+        birdleName: "BLACKCAP",
         name: "blackcap",
         imageUrl: "",
         imageAltText: "",
@@ -551,9 +551,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 86,
         letterNumber: 8,
-        birdleName: "",
+        birdleName: "GREATTIT",
         name: "great tit",
         imageUrl: "",
         imageAltText: "",
@@ -566,7 +566,7 @@ const birds = [
 // 9 LETTERS
 
     {
-        id: ,
+        id: 91,
         letterNumber: 9,
         birdleName: "GOLDFINCH",
         name: "goldfinch",
@@ -578,9 +578,9 @@ const birds = [
         birdFactsUrl: "goldfinch/"
     },
     {
-        id: ,
+        id: 92,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "CHAFFINCH",
         name: "chaffinch",
         imageUrl: "",
         imageAltText: "",
@@ -590,9 +590,9 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 93,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "SANDPIPER",
         name: "sandpiper",
         imageUrl: "",
         imageAltText: "",
@@ -602,9 +602,9 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 94,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "CORMORANT",
         name: "cormorant",
         imageUrl: "",
         imageAltText: "",
@@ -614,7 +614,7 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 95,
         letterNumber: 9,
         birdleName: "BLACKBIRD",
         name: "blackbird",
@@ -626,9 +626,9 @@ const birds = [
         birdFactsUrl: "blackbird/"
     },
     {
-        id: ,
+        id: 96,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "BRAMBLING",
         name: "brambling",
         imageUrl: "",
         imageAltText: "",
@@ -638,9 +638,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 97,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "BULLFINCH",
         name: "bullfinch",
         imageUrl: "",
         imageAltText: "",
@@ -650,9 +650,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 98,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "LITTLEOWL",
         name: "little owl",
         imageUrl: "",
         imageAltText: "",
@@ -662,9 +662,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 99,
         letterNumber: 9,
-        birdleName: "",
+        birdleName: "PEREGRINE",
         name: "peregrine",
         imageUrl: "",
         imageAltText: "",
@@ -676,9 +676,9 @@ const birds = [
 
 // 10 LETTERS
     {
-        id: ,
+        id: 101,
         letterNumber: 10,
-        birdleName: "",
+        birdleName: "SONGTHRUSH",
         name: "song thrush",
         imageUrl: "",
         imageAltText: "",
@@ -688,7 +688,7 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 102,
         letterNumber: 10,
         birdleName: "",
         name: "greenfinch",
@@ -700,9 +700,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 103,
         letterNumber: 10,
-        birdleName: "",
+        birdleName: "CHIFFCHAFF",
         name: "chiffchaff",
         imageUrl: "",
         imageAltText: "",
@@ -712,9 +712,9 @@ const birds = [
         birdFactsUrl: ""
     }, 
     {
-        id: ,
+        id: 104,
         letterNumber: 10,
-        birdleName: "",
+        birdleName: "TURTLEDOVE",
         name: "turtle dove",
         imageUrl: "",
         imageAltText: "",
@@ -724,9 +724,9 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: ,
+        id: 105,
         letterNumber: 10,
-        birdleName: "",
+        birdleName: "WOODPIGEON",
         name: "woodpigeon",
         imageUrl: "",
         imageAltText: "",
@@ -736,7 +736,7 @@ const birds = [
         birdFactsUrl: ""
     },
     {
-        id: 10,
+        id: 106,
         letterNumber: 10,
         birdleName: "KINGFISHER",
         name: "kingfisher",
@@ -749,8 +749,6 @@ const birds = [
     }
 
 ]
-
-
 
 
 //this creates the grid for word guesses
@@ -785,7 +783,7 @@ createGrid()
 
 //selects a random bird from the birds array (based on word length)
 function getBirdle() {
-    let birdWordLength = birds.filter(bird => bird.letterNumber === columns)
+    const birdWordLength = birds.filter(bird => bird.letterNumber === columns)
     console.log(birdWordLength)
     randomBirdle = birdWordLength[Math.floor(Math.random() * birdWordLength.length)]
     console.log(randomBirdle)
@@ -837,6 +835,7 @@ const deleteLetter = () => {
     // if current row is 0 and tile is 0 then slider.disabled = false;  
 }
 
+
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")
     const notAWord = document.getElementById("not-a-word")
@@ -844,7 +843,7 @@ const checkRow = () => {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${guess}`)
     .then(res => res.json())
     .then(data => {
-            if (data.title === "No Definitions Found") {
+            if (data.title === "No Definitions Found" && (birds.every(bird => bird.letterNumber !== guess && bird.birdleName !== guess))) {
                 notAWord.style.display = "block"
                 setTimeout(() => {
                     notAWord.style.display = "none"

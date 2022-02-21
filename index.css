@@ -84,6 +84,7 @@ body {
 }
 
 .hint-btn {
+    display: none;
     margin-right: 1em;
 }
 

@@ -96,6 +96,8 @@ const birds = [
     //     birdFacts: "",
     //     birdFactsUrl: ""
     // },
+
+// 4 LETTERS
     {
         id: 1,
         letterNumber: 4,
@@ -109,6 +111,80 @@ const birds = [
         birdFactsUrl: "mute-swan/"
     },
     {
+        id: ,
+        letterNumber: 4,
+        birdleName: "",
+        name: "crow",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: "carrion-crow/"
+    },
+    {
+        id: ,
+        letterNumber: 4,
+        birdleName: "",
+        name: "gull",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 4,
+        birdleName: "",
+        name: "tern",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 4,
+        birdleName: "",
+        name: "coot",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 4,
+        birdleName: "",
+        name: "rook",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 4,
+        birdleName: "",
+        name: "wren",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+
+// 5 LETTERS 
+    {
         id: 2,
         letterNumber: 5,
         birdleName: "RAVEN",
@@ -120,6 +196,56 @@ const birds = [
         birdFacts: "The common raven is massive - the biggest member of the crow family. It is all black with a large bill, and long wings. In flight, it shows a diamond-shaped tail. Ravens breed mainly in the west and north although they are currently expanding their range eastwards. Most birds are residents, though some birds - especially non-breeders and young birds - wander from their breeding areas but do not travel far. Ravens are best looked for in upland areas of south-west England, Wales, the north Pennines and Lake District and much of Scotland.",
         birdFactsUrl: "raven/"
     },
+    {
+        id: ,
+        letterNumber: 5,
+        birdleName: "",
+        name: "heron",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 5,
+        birdleName: "",
+        name: "quail",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 5,
+        birdleName: "",
+        name: "robin",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 5,
+        birdleName: "",
+        name: "swift",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+
+// 6 LETTERS
     {
         id: 6,
         letterNumber: 6,
@@ -133,429 +259,67 @@ const birds = [
         birdFactsUrl: "cuckoo/"
     },
     {
-        id: 8,
-        letterNumber: 8,
-        birdleName: "PHEASANT",
-        name: "pheasant",
-        imageUrl: "https://images.unsplash.com/photo-1618219429890-f76dfd963810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
-        imageAltText: "a pheasant standing in a grassy area",
-        imageAuthor: "Julie Mayo on Unsplash",
-        imageAuthorUrl: "https://unsplash.com/photos/5JkO2Wyrazk",
-        birdFacts: "Pheasants are large, long-tailed gamebirds. The males have rich chestnut, golden-brown and black markings on their bodies and tails, with a dark green head and red face wattling. Females are mottled with paler brown and black. They were introduced to the UK long ago and more recent introductions have brought in a variety of races and breeds for sport shooting. You can see pheasants across most of the UK. They are least common in upland and urban areas. They can usually be seen in the open countryside near woodland edges, copses and hedgerows.",
-        birdFactsUrl: "pheasant/"
-    },
-    {
-        id: 9,
-        letterNumber: 9,
-        birdleName: "GOLDFINCH",
-        name: "goldfinch",
-        imageUrl: "https://images.unsplash.com/photo-1589142911133-a1708d18c26e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
-        imageAltText: "a goldfinch perched on the end of a green thistle",
-        imageAuthor: "Steve Harrris on Unsplash",
-        imageAuthorUrl: "https://unsplash.com/photos/gjTk9N8hYME",
-        birdFacts: "The goldfinch is a highly coloured finch with a bright red face and yellow wing patch. Sociable, often breeding in loose colonies, they have a delightful liquid twittering song and call. Their long fine beaks allow them to extract otherwise inaccessible seeds from thistles and teasels. Increasingly they are visiting bird tables and feeders. In winter many UK goldfinches migrate as far south as Spain. Goldfinches can be seen anywhere there are scattered bushes and trees, rough ground with thistles and other seeding plants.",
-        birdFactsUrl: "goldfinch/"
-    },
-    {
-        id: 10,
-        letterNumber: 9,
-        birdleName: "BLACKBIRD",
-        name: "blackbird",
+        id: ,
+        letterNumber: 6,
+        birdleName: "",
+        name: "curlew",
         imageUrl: "",
         imageAltText: "",
         imageAuthor: "",
         imageAuthorUrl: "",
         birdFacts: "",
-        birdFactsUrl: "blackbird/"
+        birdFactsUrl: ""
     },
-    // {
-    //     id: ,
-    //     letterNumber: 8,
-    //     birdleName: "",
-    //     name: "blackcap",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "brambling",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "bullfinch",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 4,
-    //     birdleName: "",
-    //     name: "crow",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: "carrion-crow/"
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "chaffinch",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 10,
-    //     birdleName: "",
-    //     name: "chiffchaff",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 4,
-    //     birdleName: "",
-    //     name: "gull",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "sandpiper",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 4,
-    //     birdleName: "",
-    //     name: "tern",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 4,
-    //     birdleName: "",
-    //     name: "coot",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "cormorant",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 6,
-    //     birdleName: "",
-    //     name: "curlew",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 6,
-    //     birdleName: "",
-    //     name: "gannet",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 8,
-    //     birdleName: "",
-    //     name: "great tit",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 5,
-    //     birdleName: "",
-    //     name: "heron",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 10,
-    //     birdleName: "",
-    //     name: "greenfinch",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 7,
-    //     birdleName: "",
-    //     name: "jackdaw",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "little owl",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 6,
-    //     birdleName: "",
-    //     name: "magpie",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 6,
-    //     birdleName: "",
-    //     name: "osprey",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 8,
-    //     birdleName: "",
-    //     name: "nuthatch",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 9,
-    //     birdleName: "",
-    //     name: "peregrine",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 6,
-    //     birdleName: "",
-    //     name: "puffin",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 5,
-    //     birdleName: "",
-    //     name: "quail",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 5,
-    //     birdleName: "",
-    //     name: "robin",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 4,
-    //     birdleName: "",
-    //     name: "rook",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 10,
-    //     birdleName: "",
-    //     name: "song thrush",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },// {
-    //     id: ,
-    //     letterNumber: 8,
-    //     birdleName: "",
-    //     name: "starling",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 5,
-    //     birdleName: "",
-    //     name: "swift",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 8,
-    //     birdleName: "",
-    //     name: "tawny owl",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 10,
-    //     birdleName: "",
-    //     name: "turtle dove",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 10,
-    //     birdleName: "",
-    //     name: "woodpigeon",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-    // {
-    //     id: ,
-    //     letterNumber: 4,
-    //     birdleName: "",
-    //     name: "wren",
-    //     imageUrl: "",
-    //     imageAltText: "",
-    //     imageAuthor: "",
-    //     imageAuthorUrl: "",
-    //     birdFacts: "",
-    //     birdFactsUrl: ""
-    // },
-
     {
-        id: 10,
-        letterNumber: 10,
-        birdleName: "KINGFISHER",
-        name: "kingfisher",
-        imageUrl: "https://images.unsplash.com/photo-1626293580936-051171d7faa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-        imageAltText: "a kingfisher sitting on a mossy rock",
-        imageAuthor: "Jonny Gios on Unsplash",
-        imageAuthorUrl: "https://unsplash.com/photos/StHVlMoSN3M",
-        birdFacts: "Kingfishers are small unmistakable bright blue and orange birds of slow moving or still water. They fly rapidly, low over water, and hunt    fish from riverside perches, occasionally hovering above the water's surface. They are vulnerable to hard winters and habitat degradation through pollution or unsympathetic management of watercourses. Kingfishers are amber listed because of their unfavourable conservation status in Europe. They are also listed as a Schedule 1 species under the Wildlife and Countryside Act offering them additional protection.",
-        birdFactsUrl: "kingfisher/"
+        id: ,
+        letterNumber: 6,
+        birdleName: "",
+        name: "gannet",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
     },
+    {
+        id: ,
+        letterNumber: 6,
+        birdleName: "",
+        name: "magpie",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 6,
+        birdleName: "",
+        name: "osprey",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 6,
+        birdleName: "",
+        name: "puffin",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },    
+    
+    // 7 LETTERS 
     {
         id: "1",
         letterNumber: 7,
@@ -711,6 +475,277 @@ const birds = [
         imageAuthorUrl: "--",
         birdFacts: "Swallows are small birds with dark, glossy-blue backs, red throats, pale underparts and long tail streamers. They are extremely agile in flight and spend most of their time on the wing. They are widespread breeding birds in the Northern Hemisphere, migrating south in winter. Swallows are found in areas where there is a ready and accessible supply of small insects. They are particularly fond of open pasture with access to water and quiet farm buildings. Large reedbeds in late summer and early autumn can be good places to look for pre-migration roosts.",
         birdFactsUrl: "swallow/"
+    }, 
+    {
+        id: ,
+        letterNumber: 7,
+        birdleName: "",
+        name: "jackdaw",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+
+// 8 LETTERS
+    {
+        id: ,
+        letterNumber: 8,
+        birdleName: "",
+        name: "nuthatch",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 8,
+        birdleName: "",
+        name: "starling",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 8,
+        birdleName: "",
+        name: "tawny owl",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: 8,
+        letterNumber: 8,
+        birdleName: "PHEASANT",
+        name: "pheasant",
+        imageUrl: "https://images.unsplash.com/photo-1618219429890-f76dfd963810?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+        imageAltText: "a pheasant standing in a grassy area",
+        imageAuthor: "Julie Mayo on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/5JkO2Wyrazk",
+        birdFacts: "Pheasants are large, long-tailed gamebirds. The males have rich chestnut, golden-brown and black markings on their bodies and tails, with a dark green head and red face wattling. Females are mottled with paler brown and black. They were introduced to the UK long ago and more recent introductions have brought in a variety of races and breeds for sport shooting. You can see pheasants across most of the UK. They are least common in upland and urban areas. They can usually be seen in the open countryside near woodland edges, copses and hedgerows.",
+        birdFactsUrl: "pheasant/"
+    },
+    {
+        id: ,
+        letterNumber: 8,
+        birdleName: "",
+        name: "blackcap",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 8,
+        birdleName: "",
+        name: "great tit",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    
+// 9 LETTERS
+
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "GOLDFINCH",
+        name: "goldfinch",
+        imageUrl: "https://images.unsplash.com/photo-1589142911133-a1708d18c26e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+        imageAltText: "a goldfinch perched on the end of a green thistle",
+        imageAuthor: "Steve Harrris on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/gjTk9N8hYME",
+        birdFacts: "The goldfinch is a highly coloured finch with a bright red face and yellow wing patch. Sociable, often breeding in loose colonies, they have a delightful liquid twittering song and call. Their long fine beaks allow them to extract otherwise inaccessible seeds from thistles and teasels. Increasingly they are visiting bird tables and feeders. In winter many UK goldfinches migrate as far south as Spain. Goldfinches can be seen anywhere there are scattered bushes and trees, rough ground with thistles and other seeding plants.",
+        birdFactsUrl: "goldfinch/"
+    },
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "chaffinch",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "sandpiper",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "cormorant",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "BLACKBIRD",
+        name: "blackbird",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: "blackbird/"
+    },
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "brambling",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "bullfinch",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "little owl",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 9,
+        birdleName: "",
+        name: "peregrine",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+
+// 10 LETTERS
+    {
+        id: ,
+        letterNumber: 10,
+        birdleName: "",
+        name: "song thrush",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 10,
+        birdleName: "",
+        name: "greenfinch",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 10,
+        birdleName: "",
+        name: "chiffchaff",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    }, 
+    {
+        id: ,
+        letterNumber: 10,
+        birdleName: "",
+        name: "turtle dove",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: ,
+        letterNumber: 10,
+        birdleName: "",
+        name: "woodpigeon",
+        imageUrl: "",
+        imageAltText: "",
+        imageAuthor: "",
+        imageAuthorUrl: "",
+        birdFacts: "",
+        birdFactsUrl: ""
+    },
+    {
+        id: 10,
+        letterNumber: 10,
+        birdleName: "KINGFISHER",
+        name: "kingfisher",
+        imageUrl: "https://images.unsplash.com/photo-1626293580936-051171d7faa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        imageAltText: "a kingfisher sitting on a mossy rock",
+        imageAuthor: "Jonny Gios on Unsplash",
+        imageAuthorUrl: "https://unsplash.com/photos/StHVlMoSN3M",
+        birdFacts: "Kingfishers are small unmistakable bright blue and orange birds of slow moving or still water. They fly rapidly, low over water, and hunt    fish from riverside perches, occasionally hovering above the water's surface. They are vulnerable to hard winters and habitat degradation through pollution or unsympathetic management of watercourses. Kingfishers are amber listed because of their unfavourable conservation status in Europe. They are also listed as a Schedule 1 species under the Wildlife and Countryside Act offering them additional protection.",
+        birdFactsUrl: "kingfisher/"
     }
 
 ]
@@ -801,20 +836,6 @@ const deleteLetter = () => {
     } 
     // if current row is 0 and tile is 0 then slider.disabled = false;  
 }
-
-// const checkBirdle = (guess) => {
-//     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${guess}`)
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-
-//     if (data.title === "No Definitions Found") {
-//         console.log("not a word")
-//     } else if (data.title === guess) {
-//         console.log("is a word")
-//     }
-
-// }
-
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join("")

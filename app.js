@@ -77,6 +77,16 @@ const createKeyboard = () => {
         buttonElement.addEventListener('click', () => handleClick(key))
         keyboardRow3.append(buttonElement)
     })
+
+    // const keyListeners = new Set();
+    // keyboard.addEventListener("click", (e) => {
+    //   e.preventDefault();
+    //   const key = e.target.getAttribute("data-key");
+    //   if (key) {
+    //     keyListeners.forEach((l) => l(key));
+    //   }
+    // });
+
 }
 createKeyboard()
 

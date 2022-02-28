@@ -1,17 +1,10 @@
-//TO DO
-// Add a "not enough letters" notification if enter is pressed before 7 letters
-
 const messageDisplay = document.querySelector(".message-container")
 const infoDisplay = document.getElementById("info-overlay")
 const instructionsDisplay = document.getElementById("instructions-overlay")
 const creditsDisplay = document.getElementById("credits-overlay")
 const hintsBtn = document.getElementById("hint-modal")
-let guessRows = []
-let currentRow = 0
-let currentTile = 0
-let isGameOver = false
-const rows = 6
 
+let isGameOver = false
 let sliderValue 
 const slider = document.getElementById("wordLength");
 const output = document.getElementById("rangevalue");
@@ -79,19 +72,10 @@ const createKeyboard = () => {
         buttonElement.classList.add("test")
         buttonElement.textContent = key
         buttonElement.setAttribute('id', key)
-        buttonElement.setAttribute("data-key", key)
         buttonElement.addEventListener('click', () => handleClick(key))
         keyboardRow3.append(buttonElement)
     })
 
-    const keyListeners = new Set();
-    keysRow1.addEventListener("click", (e) => {
-      e.preventDefault();
-      const key = e.target.getAttribute("data-key");
-      if (key) {
-        keyListeners.forEach((l) => l(key));
-      }
-    });
 
 }
 createKeyboard()
@@ -766,9 +750,13 @@ const birds = [
 
 ]
 
+let guessRows = []
+let currentRow = 0
+let currentTile = 0
 
 //this creates the grid for word guesses
 function createGrid() {
+    const rows = 6
     const tileDisplay = document.querySelector(".tile-container")
     tileDisplay.innerHTML = ""
     for (let i = 0; i < rows; i++) {
@@ -848,7 +836,6 @@ const deleteLetter = () => {
         guessRows[currentRow][currentTile] = ""
         tile.setAttribute("data", "")
     } 
-    // if current row is 0 and tile is 0 then slider.disabled = false;  
 }
 
 

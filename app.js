@@ -11,10 +11,15 @@ let currentRow = 0
 let currentTile = 0
 let isGameOver = false
 const rows = 6
-let columns = 7
+
 let sliderValue 
 const slider = document.getElementById("wordLength");
 const output = document.getElementById("rangevalue");
+
+const randomStartNum = Math.floor(Math.random() * 7)
+let columns = randomStartNum +4
+output.textContent = columns
+slider.value = columns
 
 // Open/close modals in title bar
 const openCredits = document.getElementById("credits-modal").addEventListener("click", function() {
@@ -74,18 +79,19 @@ const createKeyboard = () => {
         buttonElement.classList.add("test")
         buttonElement.textContent = key
         buttonElement.setAttribute('id', key)
+        buttonElement.setAttribute("data-key", key)
         buttonElement.addEventListener('click', () => handleClick(key))
         keyboardRow3.append(buttonElement)
     })
 
-    // const keyListeners = new Set();
-    // keyboard.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   const key = e.target.getAttribute("data-key");
-    //   if (key) {
-    //     keyListeners.forEach((l) => l(key));
-    //   }
-    // });
+    const keyListeners = new Set();
+    keysRow1.addEventListener("click", (e) => {
+      e.preventDefault();
+      const key = e.target.getAttribute("data-key");
+      if (key) {
+        keyListeners.forEach((l) => l(key));
+      }
+    });
 
 }
 createKeyboard()
